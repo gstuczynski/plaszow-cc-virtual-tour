@@ -23,7 +23,7 @@ const storeConnector = {
 class SceneManager extends React.Component {
 
   componentDidMount() {
-
+   console.log(this.props.stepData.uri)
     this.updateScene({});
   }
 

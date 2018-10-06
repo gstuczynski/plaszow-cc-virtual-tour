@@ -1,4 +1,6 @@
 import alt from '../alt';
+import {asset} from "react-360";
+
 
 class TourActions {
 
@@ -9,7 +11,8 @@ class TourActions {
   navigateTo(step) {
     return(dispatch) => {
       dispatch();
-      fetch('../tour_config/' + step + '.json').then(response => {
+      fetch('tour_config/' + step + '.json').then(response => {
+        console.log('res', asset('sss'))
         if (!response.ok) {
           this.navigateToError(response.body);
         } else {
