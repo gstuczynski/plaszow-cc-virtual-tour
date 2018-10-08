@@ -1,24 +1,24 @@
-import React from "react";
-import { StyleSheet, Text, View, Image, asset, Animated } from "react-360";
+import React from 'react';
+import { StyleSheet, Text, View, Image, asset, Animated } from 'react-360';
 
 const ANIMATION_DURATION = 500;
 
 export default class Hint extends React.Component {
   state = {
-    infoCardOpacity: new Animated.Value(0)
+    infoCardOpacity: new Animated.Value(0),
   };
 
   handleInfoEnter = () => {
     Animated.timing(this.state.infoCardOpacity, {
       toValue: 1,
-      duration: ANIMATION_DURATION
+      duration: ANIMATION_DURATION,
     }).start();
   };
 
   handleInfoExit = () => {
     Animated.timing(this.state.infoCardOpacity, {
       toValue: 0,
-      duration: ANIMATION_DURATION
+      duration: ANIMATION_DURATION,
     }).start();
   };
 
@@ -29,27 +29,14 @@ export default class Hint extends React.Component {
   };
 
   renderInfoIcon = () => {
-    return (
-      <Image
-        source={asset("info.png")}
-        style={styles.image}
-        onEnter={this.handleInfoEnter}
-      />
-    );
+    return <Image source={asset('info.png')} style={styles.image} onEnter={this.handleInfoEnter} />;
   };
 
   renderInfoCard = () => {
     return (
-      <Animated.View
-        style={[styles.box, { opacity: this.state.infoCardOpacity }]}
-      >
-
+      <Animated.View style={[styles.box, { opacity: this.state.infoCardOpacity }]}>
         {/* {<Text style={styles.title}>{`${this.props.description}sss`}</Text>} */}
-        <Image
-          source={asset("bimg.jpg")}
-          style={styles.image}
-          onEnter={this.handleInfoEnter}
-      />
+        <Image source={asset('bimg.jpg')} style={styles.image} onEnter={this.handleInfoEnter} />
       </Animated.View>
     );
   };
@@ -58,7 +45,7 @@ export default class Hint extends React.Component {
     const locationStyle = {
       left: this.props.location.left,
       top: this.props.location.top,
-      position: "absolute"
+      position: 'absolute',
     };
 
     return (
@@ -73,17 +60,17 @@ export default class Hint extends React.Component {
 const styles = StyleSheet.create({
   image: {
     width: 32,
-    height: 32
+    height: 32,
   },
   box: {
     padding: 10,
     borderRadius: 10,
     width: 300,
-    backgroundColor: "rgba(255, 255, 255, 0.7)",
-    borderColor: "#639dda",
-    borderWidth: 2
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    borderColor: '#639dda',
+    borderWidth: 2,
   },
   title: {
-    fontSize: 20
-  }
+    fontSize: 20,
+  },
 });

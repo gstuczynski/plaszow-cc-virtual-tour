@@ -1,14 +1,14 @@
-import React from "react";
-import { StyleSheet, View, Environment, asset, VrButton, Text, Scene } from "react-360";
+import React from 'react';
+import { StyleSheet, View, Environment, asset, VrButton, Text, Scene, Image } from 'react-360';
 import cn from 'classnames';
 
-import SceneTitle from "./SceneTitle";
-import Hint from "./Hint";
-import Door from "./Door";
+import SceneTitle from './SceneTitle';
+import Hint from './Hint';
+import Door from './Door';
 
 import connectToStores from '../connectToStores';
-import TourStore from "../stores/tourStore";
-import TourActions from "../actions/tourActions";
+import TourStore from '../stores/tourStore';
+import TourActions from '../actions/tourActions';
 
 const storeConnector = {
   TourStore(Store) {
@@ -17,22 +17,21 @@ const storeConnector = {
       isLoading: Store.isFetching(),
       displayInfoPanel: Store.displayInfoPanelStatus(),
     };
-  }
+  },
 };
 
 class SceneManager extends React.Component {
-
   componentDidMount() {
-   console.log(this.props.stepData.uri)
+    console.log(this.props.stepData.uri);
     this.updateScene({});
   }
 
   componentDidUpdate(prevProps, prevState) {
-    //this.updateScene(prevState);
+    // this.updateScene(prevState);
   }
 
   updateScene = prevState => {
-    Environment.setBackgroundImage(asset(this.props.stepData.uri),  {format: '2D'},);
+    Environment.setBackgroundImage(asset(this.props.stepData.uri), { format: '2D' });
   };
 
   getCurrentScene = () => {
@@ -54,103 +53,103 @@ class SceneManager extends React.Component {
         title={hint.title}
         description={hint.description}
         location={hint.location}
-        onClick={()=>TourActions.chanegeInfoPanelStatus(true)}
+        onClick={() => TourActions.chanegeInfoPanelStatus(true)}
       />
     ));
   };
 
   renderInfoPanels = (infoPanels = []) => {
-    
     return infoPanels.map((infoPanel, idx) => {
-      const top = infoPanel.location.top
-      const left = infoPanel.location.left
-  
+      const top = infoPanel.location.top;
+      const left = infoPanel.location.left;
+
       const styles = StyleSheet.create({
         panel: {
           width: 200,
           height: 120,
-          backgroundColor: "black",
-          justifyContent: "center",
-          alignItems: "center",
+          backgroundColor: 'black',
+          justifyContent: 'center',
+          alignItems: 'center',
           top,
           left,
-        }
+        },
+        icon: {
+          width: 50,
+          height: 50,
+        },
       });
 
       return (
-        <VrButton key={idx} style={styles.panel} onClick={()=>TourActions.displayInfoPanel(idx)}  >
-          <View >
+        <VrButton key={idx} onClick={() => TourActions.displayInfoPanel(idx)}>
+          {console.log(infoPanel)}
+          {infoPanel.icon && <Image style={styles.icon} source={asset('icons/loupe.png')} />}
+          {/* <View >
               <Text>Read more...</Text>
-          </View>
+          </View> */}
         </VrButton>
-     )
+      );
     });
   };
 
-
-
   renderDoors = (doors = []) => {
     return doors.map((door, idx) => {
-      const top = door.location.top
-      const left = door.location.left
-  
+      const top = door.location.top;
+      const left = door.location.left;
+
       const styles = StyleSheet.create({
         panel: {
           width: 200,
           height: 120,
-          backgroundColor: "black",
-          justifyContent: "center",
-          alignItems: "center",
+
+          justifyContent: 'center',
+          alignItems: 'center',
           top,
           left,
-        }
+        },
       });
       return (
-        <VrButton key={idx} style={styles.panel} onClick={this.handleDoorClick.bind(this, door.sceneId)}  >
-          <View >
-              <Text>{door.title}</Text>
+        <VrButton
+          key={idx}
+          style={styles.panel}
+          onClick={this.handleDoorClick.bind(this, door.sceneId)}>
+          <View>
+            <Text>{door.title}</Text>
           </View>
-      </VrButton>
+        </VrButton>
       );
     });
   };
 
   render() {
-
-    //const top = this.props.stepData ? this.props.stepData.infoPanel.location.top : 0
-    //const left = this.props.stepData ? this.props.stepData.infoPanel.location.left : 0
+    // const top = this.props.stepData ? this.props.stepData.infoPanel.location.top : 0
+    // const left = this.props.stepData ? this.props.stepData.infoPanel.location.left : 0
 
     const styles = StyleSheet.create({
       panel: {
         width: 200,
         height: 120,
-        backgroundColor: "black",
-        justifyContent: "center",
-        alignItems: "center",
-        //top,
-        //left,
-      }
+        backgroundColor: 'yellow',
+        justifyContent: 'center',
+        alignItems: 'center',
+        // top,
+        // left,
+      },
     });
 
-    const panelClassNames = cn(styles.panel, {top: 300})
+    const panelClassNames = cn(styles.panel, { top: 300 });
     return (
       <Scene style={{ flex: 1 }}>
-
-       <SceneTitle title={this.props.stepData.uri} />
-       <View>
-        {this.renderHints(this.props.stepData.hints)}
-        {this.renderDoors(this.props.stepData.doors)}
-        {this.props.stepData.infoPanels &&
-          this.renderInfoPanels(this.props.stepData.infoPanels)
-        }
-      </View>
+        <SceneTitle title={this.props.stepData.uri} />
+        <View>
+          {this.renderHints(this.props.stepData.hints)}
+          {this.renderDoors(this.props.stepData.doors)}
+          {this.props.stepData.infoPanels && this.renderInfoPanels(this.props.stepData.infoPanels)}
+        </View>
       </Scene>
     );
   }
 }
 
-const SceneManagerWithStore = connectToStores(
-  SceneManager, [TourStore], storeConnector
-);
+const SceneManagerWithStore = connectToStores(SceneManager, [TourStore], storeConnector);
 
 export default SceneManagerWithStore;

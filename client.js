@@ -1,10 +1,9 @@
 // This file contains the boilerplate to execute your React app.
 // If you want to modify your application's content, start in "index.js"
 
-import {Math as VRMath, ReactInstance, Surface } from "react-360-web";
+import { Math as VRMath, ReactInstance, Surface } from 'react-360-web';
 
 function init(bundle, parent, options = {}) {
-
   const infoPanel = new Surface(1400, 800, Surface.SurfaceShape.Flat);
   const closeButton = new Surface(200, 200, Surface.SurfaceShape.Flat);
   const cameraDirection = [0, 0, -1];
@@ -26,27 +25,24 @@ function init(bundle, parent, options = {}) {
       const horizAngle = Math.atan2(cx, -cz);
       const vertAngle = Math.asin(cy / Math.sqrt(cx * cx + cy * cy + cz * cz));
       infoPanel.setAngle(horizAngle, vertAngle);
-      closeButton.setAngle(horizAngle, vertAngle -0.5);
+      closeButton.setAngle(horizAngle, vertAngle - 0.5);
     },
-    ...options
+    ...options,
   });
 
   const cylinderSurface = new Surface(
-    4680 /* width */,
-    1200 /* height */,
+    1000 /* width */,
+    600 /* height */,
     Surface.SurfaceShape.Cylinder /* shape */
   );
   r360.compositor.setCursorVisibility('visible');
   r360.renderToSurface(
-    r360.createRoot("TemplateTour", {
+    r360.createRoot('TemplateTour', {
       /* initial props */
     }),
     cylinderSurface
   );
 
-
-
-  //r360.renderToSurface(r360.createRoot('HorizontalPanel'), horizontalPanel);
   r360.renderToSurface(r360.createRoot('InfoPanel'), infoPanel);
   r360.renderToSurface(r360.createRoot('CloseButton'), closeButton);
   // Load the initial environment
