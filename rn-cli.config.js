@@ -9,8 +9,7 @@ var config = {
   },
 
   getBlacklistRE() {
-    return blacklist([
-    ]);
+    return blacklist([]);
   },
 
   getAssetExts() {
@@ -23,6 +22,12 @@ var config = {
 
   getProvidesModuleNodeModules() {
     return ['react-native', 'react-360'];
+  },
+  getTransformModulePath() {
+    return require.resolve("react-native-stylus-transformer");
+  },
+  getSourceExts() {
+    return ["js", "jsx", "styl"];
   },
 };
 

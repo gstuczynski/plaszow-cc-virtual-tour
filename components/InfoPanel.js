@@ -28,57 +28,26 @@ const storeConnector = {
 
 class InfoPanel extends React.Component {
   render() {
-    stepData = this.props.stepData ? this.props.stepData : null;
-    infoPanel = stepData ? stepData.infoPanels[this.props.infoPanelIdx] : null;
-    infoPanelContent = infoPanel ? infoPanel.content : null;
-    img = infoPanel ? infoPanel.img : null;
-    style = infoPanel ? infoPanel.style : {};
-    console.log(this.props.displayInfoPanel);
+    const stepData = this.props.stepData ? this.props.stepData : null;
+    const infoPanel = stepData ? stepData.infoPanels[this.props.infoPanelIdx] : null;
+    const contentBeside = infoPanel ? infoPanel.contentBeside : null;
+    const contentBottom = infoPanel ? infoPanel.contentBottom : null;
+    const image = infoPanel ? infoPanel.image : null;
+    const style = infoPanel ? infoPanel.style : {};
     return (
-      <View style={this.props.displayInfoPanel ? styles.panel : styles.hidden} pointerEvents="none">
-        {img && (
-          <Image source={asset('bimg.jpg')} style={styles.image} onEnter={this.handleInfoEnter} />
-        )}
-
-        {/* TourActions.hideInfoPanel() */}
-        <View>
-          <Text style={styles.panelText}>{`${infoPanelContent}`}</Text>
-          <View>
-            <Text>Read more...</Text>
-          </View>
+      <View
+        style={this.props.displayInfoPanel ? style.panel : { display: 'none' }}
+        pointerEvents="none">
+        <View style={{ flexDirection: 'row' }}>
+          {image && <Image style={style.image} source={asset(`images/${image}`)} />}
+          <Text style={style.contentBeside}>{`${contentBeside}`}</Text>
         </View>
+        <Text style={style.contentBottom}>{`${contentBottom}`}</Text>
+        
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  panel: {
-    backgroundColor: 'red',
-    display: 'flex',
-    flexDirection: 'row',
-    // transform: [
-    //   {translateY: 5000}
-    // ]
-  },
-  panelText: {
-    color: 'white',
-    fontSize: 50,
-    textAlign: 'justify',
-    width: 500,
-  },
-  hidden: {
-    display: 'none',
-    zIndex: -10,
-  },
-  image: {
-    width: 500,
-    height: 600,
-  },
-  closeButton: {
-    backgroundColor: 'red',
-  },
-});
 
 const InfoPanelWithStore = connectToStores(InfoPanel, [TourStore], storeConnector);
 

@@ -1,14 +1,16 @@
 import React from 'react';
-import { StyleSheet, View, Environment, asset, VrButton, Text, Scene, Image } from 'react-360';
-import cn from 'classnames';
+import { StyleSheet, View, Environment, asset, VrButton, Text, Scene } from 'react-360';
+import _ from 'underscore';
 
 import SceneTitle from './SceneTitle';
+import InfoPanelButton from './InfoPanelButton';
 import Hint from './Hint';
 import Door from './Door';
 
 import connectToStores from '../connectToStores';
 import TourStore from '../stores/tourStore';
 import TourActions from '../actions/tourActions';
+import test from './test.module.styl';
 
 const storeConnector = {
   TourStore(Store) {
@@ -31,7 +33,7 @@ class SceneManager extends React.Component {
   }
 
   updateScene = prevState => {
-    Environment.setBackgroundImage(asset(this.props.stepData.uri), { format: '2D' });
+    Environment.setBackgroundImage(asset(this.props.stepData.uri), { format: '3DTB' });
   };
 
   getCurrentScene = () => {
@@ -63,30 +65,13 @@ class SceneManager extends React.Component {
       const top = infoPanel.location.top;
       const left = infoPanel.location.left;
 
-      const styles = StyleSheet.create({
-        panel: {
-          width: 200,
-          height: 120,
-          backgroundColor: 'black',
-          justifyContent: 'center',
-          alignItems: 'center',
-          top,
-          left,
-        },
-        icon: {
-          width: 50,
-          height: 50,
-        },
-      });
-
       return (
-        <VrButton key={idx} onClick={() => TourActions.displayInfoPanel(idx)}>
-          {console.log(infoPanel)}
-          {infoPanel.icon && <Image style={styles.icon} source={asset('icons/loupe.png')} />}
-          {/* <View >
-              <Text>Read more...</Text>
-          </View> */}
-        </VrButton>
+        <InfoPanelButton
+          key={idx}
+          location={{ top, left }}
+          onClick={() => TourActions.displayInfoPanel(idx)}
+          icon={infoPanel.icon}
+        />
       );
     });
   };
@@ -96,22 +81,10 @@ class SceneManager extends React.Component {
       const top = door.location.top;
       const left = door.location.left;
 
-      const styles = StyleSheet.create({
-        panel: {
-          width: 200,
-          height: 120,
+      const styles = _.extend({}, test.test, { top, left });
 
-          justifyContent: 'center',
-          alignItems: 'center',
-          top,
-          left,
-        },
-      });
       return (
-        <VrButton
-          key={idx}
-          style={styles.panel}
-          onClick={this.handleDoorClick.bind(this, door.sceneId)}>
+        <VrButton key={idx} style={styles} onClick={this.handleDoorClick.bind(this, door.sceneId)}>
           <View>
             <Text>{door.title}</Text>
           </View>
@@ -136,13 +109,12 @@ class SceneManager extends React.Component {
       },
     });
 
-    const panelClassNames = cn(styles.panel, { top: 300 });
     return (
       <Scene style={{ flex: 1 }}>
-        <SceneTitle title={this.props.stepData.uri} />
+        {/* {<SceneTitle title={this.props.stepData.uri} />} */}
         <View>
-          {this.renderHints(this.props.stepData.hints)}
-          {this.renderDoors(this.props.stepData.doors)}
+          {/*this.renderHints(this.props.stepData.hints)*/}
+          {/*this.renderDoors(this.props.stepData.doors)*/}
           {this.props.stepData.infoPanels && this.renderInfoPanels(this.props.stepData.infoPanels)}
         </View>
       </Scene>

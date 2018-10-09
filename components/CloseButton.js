@@ -15,10 +15,21 @@ import connectToStores from '../connectToStores';
 import TourStore from '../stores/tourStore';
 import TourActions from '../actions/tourActions';
 
+const storeConnector = {
+  TourStore(Store) {
+    return {
+      displayInfoPanel: Store.displayInfoPanelStatus(),
+    };
+  },
+};
+
 class CloseButton extends React.Component {
   render() {
     return (
-      <VrButton style={styles.closeButton} onClick={() => TourActions.hideInfoPanel()}>
+      <VrButton
+        onClick={() => TourActions.hideInfoPanel()}
+        style={!this.props.displayInfoPanel ? { display: 'none' } : {flexDirection: 'row'}}>
+        <Image style={styles.image} source={asset('icons/close-button.png')} />
         <Text style={styles.buttonInfo}>Close</Text>
       </VrButton>
     );
@@ -33,7 +44,9 @@ const styles = StyleSheet.create({
   },
   buttonInfo: {
     padding: 10,
+    height: 32,
     textAlign: 'center',
+    backgroundColor: 'red'
   },
   image: {
     width: 32,
@@ -41,9 +54,7 @@ const styles = StyleSheet.create({
   },
 });
 
-// const CloseButtonWithStore = connectToStores(
-//     CloseButton, [TourStore], storeConnector
-// );
+const CloseButtonWithStore = connectToStores(CloseButton, [TourStore], storeConnector);
 
-AppRegistry.registerComponent('CloseButton', () => CloseButton);
-export default CloseButton;
+AppRegistry.registerComponent('CloseButton', () => CloseButtonWithStore);
+export default CloseButtonWithStore;

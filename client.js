@@ -25,27 +25,24 @@ function init(bundle, parent, options = {}) {
       const horizAngle = Math.atan2(cx, -cz);
       const vertAngle = Math.asin(cy / Math.sqrt(cx * cx + cy * cy + cz * cz));
       infoPanel.setAngle(horizAngle, vertAngle);
-      closeButton.setAngle(horizAngle, vertAngle - 0.5);
+      closeButton.setAngle(horizAngle, vertAngle - 0.6);
     },
     ...options,
   });
 
   const cylinderSurface = new Surface(
-    1000 /* width */,
-    600 /* height */,
+    4096,
+    720,
     Surface.SurfaceShape.Cylinder /* shape */
   );
   r360.compositor.setCursorVisibility('visible');
   r360.renderToSurface(
-    r360.createRoot('TemplateTour', {
-      /* initial props */
-    }),
+    r360.createRoot('TemplateTour'),
     cylinderSurface
   );
 
   r360.renderToSurface(r360.createRoot('InfoPanel'), infoPanel);
   r360.renderToSurface(r360.createRoot('CloseButton'), closeButton);
-  // Load the initial environment
 }
 
 window.React360 = { init };
