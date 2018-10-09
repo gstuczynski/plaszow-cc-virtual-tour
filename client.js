@@ -30,16 +30,9 @@ function init(bundle, parent, options = {}) {
     ...options,
   });
 
-  const cylinderSurface = new Surface(
-    4096,
-    720,
-    Surface.SurfaceShape.Cylinder /* shape */
-  );
+  const cylinderSurface = new Surface(4096, 720, Surface.SurfaceShape.Cylinder /* shape */);
   r360.compositor.setCursorVisibility('visible');
-  r360.renderToSurface(
-    r360.createRoot('TemplateTour'),
-    cylinderSurface
-  );
+  r360.renderToSurface(r360.createRoot('TemplateTour'), cylinderSurface);
 
   r360.renderToSurface(r360.createRoot('InfoPanel'), infoPanel);
   r360.renderToSurface(r360.createRoot('CloseButton'), closeButton);

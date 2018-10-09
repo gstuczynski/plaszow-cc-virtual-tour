@@ -33,7 +33,7 @@ class SceneManager extends React.Component {
   }
 
   updateScene = prevState => {
-    Environment.setBackgroundImage(asset(this.props.stepData.uri), { format: '3DTB' });
+    Environment.setBackgroundImage(asset(this.props.stepData.uri), { format: '2D' });
   };
 
   getCurrentScene = () => {
@@ -77,21 +77,36 @@ class SceneManager extends React.Component {
   };
 
   renderDoors = (doors = []) => {
-    return doors.map((door, idx) => {
-      const top = door.location.top;
-      const left = door.location.left;
-
-      const styles = _.extend({}, test.test, { top, left });
+    return doors.map((door, i) => {
 
       return (
-        <VrButton key={idx} style={styles} onClick={this.handleDoorClick.bind(this, door.sceneId)}>
-          <View>
-            <Text>{door.title}</Text>
-          </View>
-        </VrButton>
+        <Door
+          key={i}
+          onClick={() => this.handleDoorClick(door.sceneId)}
+          title={door.title}
+          preview={door.preview}
+          location={door.location}
+        />
       );
     });
   };
+
+  // renderDoors = (doors = []) => {
+  //   return doors.map((door, idx) => {
+  //     const top = door.location.top;
+  //     const left = door.location.left;
+
+  //     const styles = _.extend({}, test.test, { top, left });
+
+  //     return (
+  //       <VrButton key={idx} style={styles} onClick={this.handleDoorClick.bind(this, door.sceneId)}>
+  //         <View>
+  //           <Text>{door.title}</Text>
+  //         </View>
+  //       </VrButton>
+  //     );
+  //   });
+  // };
 
   render() {
     // const top = this.props.stepData ? this.props.stepData.infoPanel.location.top : 0
@@ -113,8 +128,8 @@ class SceneManager extends React.Component {
       <Scene style={{ flex: 1 }}>
         {/* {<SceneTitle title={this.props.stepData.uri} />} */}
         <View>
-          {/*this.renderHints(this.props.stepData.hints)*/}
-          {/*this.renderDoors(this.props.stepData.doors)*/}
+          {/* this.renderHints(this.props.stepData.hints) */}
+          { this.renderDoors(this.props.stepData.doors) }
           {this.props.stepData.infoPanels && this.renderInfoPanels(this.props.stepData.infoPanels)}
         </View>
       </Scene>

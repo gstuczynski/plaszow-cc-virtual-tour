@@ -57,9 +57,11 @@
   ],
   "doors": [{
     "sceneId": "bonarka2",
+    "preview": "bimg.jpg",
+    "title": "Część administracyjno wojskowa",
     "location": {
-      "left": 100,
-      "top": 20
+      "left": 1500,
+      "top": 200
     }
   }],
   "hints": [{

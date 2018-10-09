@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, Text, View, asset, VrButton, Animated } from 'react-360';
+import React from "react";
+import { StyleSheet, Text, View, asset, VrButton, Animated } from "react-360";
 
 const INITIAL_PREVIEW_SIZE = 64;
 const SCALED_PREVIEW_SIZE = 200;
@@ -9,13 +9,13 @@ export default class Door extends React.Component {
   state = {
     isOverButton: false,
     isOverPreview: false,
-    previewSize: new Animated.Value(INITIAL_PREVIEW_SIZE),
+    previewSize: new Animated.Value(INITIAL_PREVIEW_SIZE)
   };
 
   handlePreviewEnter = () => {
     Animated.timing(this.state.previewSize, {
       toValue: SCALED_PREVIEW_SIZE,
-      duration: PREVIEW_ANIMATION_DURATION,
+      duration: PREVIEW_ANIMATION_DURATION
     }).start();
 
     this.setState({ isOverPreview: true });
@@ -24,7 +24,7 @@ export default class Door extends React.Component {
   handlePreviewExit = () => {
     Animated.timing(this.state.previewSize, {
       toValue: INITIAL_PREVIEW_SIZE,
-      duration: PREVIEW_ANIMATION_DURATION,
+      duration: PREVIEW_ANIMATION_DURATION
     }).start();
 
     this.setState({ isOverPreview: false });
@@ -46,7 +46,7 @@ export default class Door extends React.Component {
 
   render() {
     const highlightedBoxStyle = {
-      backgroundColor: this.state.isOverButton ? '#b36800' : '#ff9500',
+      backgroundColor: this.state.isOverButton ? "#808080" : "#B5C4C9"
     };
 
     return (
@@ -54,15 +54,31 @@ export default class Door extends React.Component {
         style={{
           top: this.props.location.top,
           left: this.props.location.left,
-          width: 200,
-          height: 200,
-          backgroundColor: 'yellow',
-          zIndex: 10,
+          position: "absolute"
         }}
-        onEnter={this.handleButtonEnter}
-        onExit={this.handleButtonExit}
-        onClick={this.handleButtonClick}>
-        <Text>{`${this.props.title}`}</Text>
+      >
+        <VrButton
+          style={[styles.box, highlightedBoxStyle]}
+          onEnter={this.handleButtonEnter}
+          onExit={this.handleButtonExit}
+          onClick={this.handleButtonClick}
+        >
+          <Text style={{ top: -40 }}>{`${this.props.title}`}</Text>
+
+          <Animated.Image
+            source={asset(this.props.preview)}
+            onEnter={this.handlePreviewEnter}
+            onExit={this.handlePreviewExit}
+            style={[
+              styles.image,
+              {
+                width: this.state.previewSize,
+                height: this.state.previewSize,
+                borderWidth: this.state.isOverPreview ? 1 : 0
+              }
+            ]}
+          />
+        </VrButton>
       </View>
     );
   }
@@ -70,20 +86,20 @@ export default class Door extends React.Component {
 
 const styles = StyleSheet.create({
   image: {
-    top: 55,
-    position: 'absolute',
+    top: 70,
+    position: "absolute",
     borderRadius: 32,
-    borderColor: 'rgba(255, 255, 255, 1)',
+    borderColor: "rgba(255, 255, 255, 1)"
   },
   box: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 20,
-    padding: 20,
-    width: 130,
-    height: 130,
+    padding: 10,
+    width: 150,
+    height: 150
   },
   title: {
-    fontSize: 20,
-  },
+    fontSize: 12
+  }
 });

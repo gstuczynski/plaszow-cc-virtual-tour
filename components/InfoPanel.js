@@ -43,7 +43,6 @@ class InfoPanel extends React.Component {
           <Text style={style.contentBeside}>{`${contentBeside}`}</Text>
         </View>
         <Text style={style.contentBottom}>{`${contentBottom}`}</Text>
-        
       </View>
     );
   }

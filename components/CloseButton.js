@@ -28,7 +28,7 @@ class CloseButton extends React.Component {
     return (
       <VrButton
         onClick={() => TourActions.hideInfoPanel()}
-        style={!this.props.displayInfoPanel ? { display: 'none' } : {flexDirection: 'row'}}>
+        style={!this.props.displayInfoPanel ? { display: 'none' } : { flexDirection: 'row' }}>
         <Image style={styles.image} source={asset('icons/close-button.png')} />
         <Text style={styles.buttonInfo}>Close</Text>
       </VrButton>
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     padding: 10,
     height: 32,
     textAlign: 'center',
-    backgroundColor: 'red'
+    backgroundColor: 'red',
   },
   image: {
     width: 32,
