@@ -19,7 +19,6 @@ const storeConnector = {
   TourStore(Store) {
     return {
       stepData: Store.getStepData(),
-      displayInfoPanel: Store.displayInfoPanelStatus(),
       infoPanelData: Store.getInfoPanelData(),
       infoPanelIdx: Store.getInfoPanelIdx(),
     };
@@ -34,10 +33,9 @@ class InfoPanel extends React.Component {
     const contentBottom = infoPanel ? infoPanel.contentBottom : null;
     const image = infoPanel ? infoPanel.image : null;
     const style = infoPanel ? infoPanel.style : {};
+
     return (
-      <View
-        style={this.props.displayInfoPanel ? style.panel : { display: 'none' }}
-        pointerEvents="none">
+      <View style={style.panel}>
         <View style={{ flexDirection: 'row' }}>
           {image && <Image style={style.image} source={asset(`images/${image}`)} />}
           <Text style={style.contentBeside}>{`${contentBeside}`}</Text>

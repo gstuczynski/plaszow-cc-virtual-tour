@@ -1,6 +1,7 @@
 {
   "rotationOffset": 0,
   "uri": "bonarka-01.jpg",
+  "sceneId": "bonarka1",
   "infoPanels": [
     {
       "content": "dupa1",
@@ -13,7 +14,7 @@
           "textAlign": "left"
         },
         "panelText": {
-          "width": 800,
+          "width": 750,
           "height": 800,
           "textAlign": "left",
           "color": "white"
@@ -36,12 +37,13 @@
       "style": {
         "panel": {
           "width": 1400,
-          "backgroundColor": "black"
+          "backgroundColor": "black",
+          "alignItems": "stretch"
         },
         "image": {
-          "width": 800,
+          "width": 750,
           "height": 400,
-          "margin": 20
+          "margin": 15
          },
         "contentBeside": {
           "margin": 10,

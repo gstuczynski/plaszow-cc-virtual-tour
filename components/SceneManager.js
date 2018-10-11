@@ -6,11 +6,15 @@ import SceneTitle from './SceneTitle';
 import InfoPanelButton from './InfoPanelButton';
 import Hint from './Hint';
 import Door from './Door';
+import MapPanelButton from './MapPanelButton';
+import MapPanel from './MapPanel';
+
+
 
 import connectToStores from '../connectToStores';
 import TourStore from '../stores/tourStore';
 import TourActions from '../actions/tourActions';
-import test from './test.module.styl';
+
 
 const storeConnector = {
   TourStore(Store) {
@@ -78,7 +82,6 @@ class SceneManager extends React.Component {
 
   renderDoors = (doors = []) => {
     return doors.map((door, i) => {
-
       return (
         <Door
           key={i}
@@ -125,14 +128,14 @@ class SceneManager extends React.Component {
     });
 
     return (
-      <Scene style={{ flex: 1 }}>
+      <View style={{ flex: 1, zIndex: -1 }}>
         {/* {<SceneTitle title={this.props.stepData.uri} />} */}
         <View>
-          {/* this.renderHints(this.props.stepData.hints) */}
-          { this.renderDoors(this.props.stepData.doors) }
+          {this.renderHints(this.props.stepData.hints)}
+          {this.renderDoors(this.props.stepData.doors)}
           {this.props.stepData.infoPanels && this.renderInfoPanels(this.props.stepData.infoPanels)}
         </View>
-      </Scene>
+      </View>
     );
   }
 }

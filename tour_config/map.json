@@ -1,0 +1,18 @@
+{
+    "pins": [
+        {
+            "sceneId": "bonarka1",
+            "location": {
+                "top": 20
+                
+            }
+        },
+        {
+            "sceneId": "bonarka2",
+            "location": {
+                "top": 100,
+                "left": 20
+            }            
+        }
+    ]
+}

@@ -13,17 +13,17 @@ const storeConnector = {
   },
 };
 
-class CloseButton extends React.Component {
+class MapPanelButton extends React.Component {
   render() {
     console.log('close button props', this.props);
     return (
       <VrButton
-        onClick={() => TourActions.hideInfoPanel()}
+        onClick={() => TourActions.displayMap()}
         style={{
           flexDirection: 'row',
-          transform: [{ translateY: 0 }, { translateX: 1380 }],
+          transform: [/*{ translateY: 0 }, { translateX: 1380 }*/],
         }}>
-        <Image style={styles.image} source={asset('icons/close-button.png')} />
+        <Image style={styles.image} source={asset('icons/map.png')} />
       </VrButton>
     );
   }
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const CloseButtonWithStore = connectToStores(CloseButton, [TourStore], storeConnector);
+const MapPanelButtonWithStore = connectToStores(MapPanelButton, [TourStore], storeConnector);
 
-AppRegistry.registerComponent('CloseButton', () => CloseButtonWithStore);
-export default CloseButtonWithStore;
+AppRegistry.registerComponent('MapPanelButton', () => MapPanelButtonWithStore);
+export default MapPanelButtonWithStore;

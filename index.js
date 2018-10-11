@@ -1,5 +1,5 @@
 import React from "react";
-import { AppRegistry, View, Text, StyleSheet } from "react-360";
+import { AppRegistry, View, Text, StyleSheet, NativeModules, assert } from "react-360";
 
 import SceneManager from "./components/SceneManager.js";
 import InfoPanel from "./components/InfoPanel.js";
@@ -11,6 +11,8 @@ import config from './tour_config/config.json';
 import TourStore from './stores/tourStore';
 import TourActions from "./actions/tourActions";
 import connectToStores from './connectToStores';
+
+const BrowserInfo = NativeModules.BrowserInfo;
 
 
 const storeConnector = {

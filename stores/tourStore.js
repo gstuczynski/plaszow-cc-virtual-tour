@@ -20,7 +20,7 @@ class TourStore {
   }
 
   getStepData() {
-      return this.state.step;
+    return this.state.step;
   }
 
   getInfoPanelIdx() {
@@ -44,10 +44,6 @@ class TourStore {
     this.setState({ step, isFetching: false })
   }
 
-  onDisplayInfoPanel(diplay) {
-    this.setState({ infoPanel ,displayInfoPanel: diplay })
-  }
-
   displayInfoPanelStatus() {
     return this.state.displayInfoPanel;
   }
@@ -56,8 +52,8 @@ class TourStore {
     return this.state.step ? this.state.step.infoPanels[this.state.idx] : null; 
   }
 
-  onDisplayInfoPanel(idx) {
-    this.setState({idx, displayInfoPanel: true})
+  onDisplayInfoPanelSuccess(idx) {
+    this.setState({idx})
   }
 
   onHideInfoPanel(){
