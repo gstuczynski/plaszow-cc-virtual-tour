@@ -9,12 +9,9 @@ import Door from './Door';
 import MapPanelButton from './MapPanelButton';
 import MapPanel from './MapPanel';
 
-
-
 import connectToStores from '../connectToStores';
 import TourStore from '../stores/tourStore';
 import TourActions from '../actions/tourActions';
-
 
 const storeConnector = {
   TourStore(Store) {
@@ -64,19 +61,27 @@ class SceneManager extends React.Component {
     ));
   };
 
+  renderPanel = (panel, idx) => {
+    const top = panel.location.top;
+    const left = panel.location.left;
+    return (
+      <InfoPanelButton
+        key={idx}
+        location={{ top, left }}
+        onClick={() => TourActions.displayInfoPanel(idx)}
+        icon={panel.icon}
+      />
+    );
+  };
+
   renderInfoPanels = (infoPanels = []) => {
     return infoPanels.map((infoPanel, idx) => {
-      const top = infoPanel.location.top;
-      const left = infoPanel.location.left;
-
-      return (
-        <InfoPanelButton
-          key={idx}
-          location={{ top, left }}
-          onClick={() => TourActions.displayInfoPanel(idx)}
-          icon={infoPanel.icon}
-        />
-      );
+      if (!infoPanel.sections) {
+        return this.renderPanel(infoPanel, idx);
+      } else {
+        console.log('else', infoPanel);
+        return this.renderPanel(infoPanel.sections[0], idx);
+      }
     });
   };
 

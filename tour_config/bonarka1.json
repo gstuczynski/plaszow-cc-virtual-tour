@@ -2,8 +2,7 @@
   "rotationOffset": 0,
   "uri": "bonarka-01.jpg",
   "sceneId": "bonarka1",
-  "infoPanels": [
-    {
+  "infoPanels": [{
       "content": "dupa1",
       "icon": "loupe.png",
       "img": "bimg.jpg",
@@ -26,35 +25,72 @@
       }
     },
     {
-      "contentBeside": "Wraz z powstaniem nowego cmentarza gminy żydowskiej konieczne stało się wybudowanie hali domu przedpogrzebowego oraz pomieszczeń związanych z administracja cmentarza. Władze gminy bardzo poważnie potraktowały nowe przedsięwzięcie ogłaszając w roku 1920 międzynarodowy konkurs na zagospodarowanie przestrzeni cmentarza. Mogli w nim wziąć udział wyłącznie architekci żydowskiego pochodzenia, przewidziano nagrody finansowe dla trzech najlepszych projektów, dwa dowolne gmina zamierzała kupić od autorów.  W warunkach konkursu określono, że dominującym budynkiem ma być właśnie hala przedpogrzebowa, której należało nadać odpowiedni, monumentalny charakter. Bardzo dokładnie wymieniono też pomieszczenia służące ceremonii, jakie należało zaplanować. Były to: sale dla rabina i kapłana, pomieszczenia do mycia zwłok, kostnica i sala modlitwy. W konkursie nagrodzono i wybrano do realizacji projekt krakowskiego architekta Adolfa Siódmaka.  We wrześniu roku 1922 gotowe były już plany realizacyjne budynku, rozpoczęto też starania o zatwierdzenie projektu przez władze miasta i wydanie zgody na budowę.  Do budowy przystąpiono w roku 1926.",
-      "contentBottom":" Hala składała się z trzech części, z których środkowa, najwyższa mierzyła 25 m wysokości, a każda zwieńczona była kopułą. Całość  ozdobiona została dekoracją w stylu orientalnym, do wnętrza prowadził portal zamknięty oślim łukiem. Dziś jeszcze możemy zobaczyć fragmenty rzeźbionej dekoracji znajdującej się pierwotnie nad tym właśnie portalem, wyraźnie widoczne są ornamenty w postaci liści, wisienek, gwiazd Dawida. Wnętrze budynku miało zostać ozdobione malowidłami, jednak nie wiadomo, co dokładnie przedstawiała dekoracja. Otwarcie cmentarza i domu przedpogrzebowego nastąpiło 6 kwietnia 1932 roku i mimo, że prace nie były jeszcze ukończone, dzień ten był wielkim świętem dla całej gminy żydowskiej. Na zdjęciach z ceremonii widnieje monumentalny i surowy w wyrazie budynek hali. W tym czasie  nie został jeszcze otynkowany, teren wokół pozostawia wiele do życzenia. Z informacji prasowych wiadomo, że dekoracja wnętrza nie była jeszcze gotowa, jednak witraże w oknach zostały zamontowane na czas. Nigdy nie powstała też okazała kolumnada mająca pierwotnie stanąć przed budynkiem, z jej budowy zrezygnowano już wcześniej. Prace przy domu przedpogrzebowym trwały do końca lat 30-tych i nigdy nie zostały dokończone. W czasie wojny budynek odegrał bardzo ważną rolę – w schowku na poddaszu budynku ukryto ok. 150 zwojów Tory oraz różne przedmioty stanowiące wyposażenie krakowskich synagog.   Już we wrześniu 1939 roku zarządzono zamkniecie wszystkich synagog. a w marcu 1941nakazano oddanie kluczy do budynków. Dzięki inicjatywie Jakuba Stendiga udało się zgromadzić całkiem pokaźną ilość przedmiotów wyniesionych z synagog, między innymi zwoje Tory, świeczniki, haftowane tkaniny, naczynia, książki i modlitewniki. Początkowo przechowywano je w budynku Gminy Żydowskiej przy ul. Limanowskiego 2, ale z czasem stało się to zbyt niebezpieczne, gdyż  istniało duże ryzyko odkrycia zbiorów przez Niemców.  Zapadła wiec decyzja o ukryciu wszystkich przedmiotów w kopule domu przedpogrzebowego. Pod pretekstem naprawy dachu, akcji tej dokonali rzemieślnicy mieszkający w getcie.",
-      "location": {
-        "left": 2000,
-        "top": 350
-      },
-      "image": "pre-burial-house.jpg",
-      "icon": "loupe.png",
-      "style": {
-        "panel": {
-          "width": 1400,
-          "backgroundColor": "black",
-          "alignItems": "stretch"
+      "sections": [{
+          "contentBeside": "Wraz z powstaniem nowego cmentarza gminy żydowskiej konieczne stało się wybudowanie hali domu przedpogrzebowego oraz pomieszczeń związanych z administracja cmentarza. Władze gminy bardzo poważnie potraktowały nowe przedsięwzięcie ogłaszając w roku 1920 międzynarodowy konkurs na zagospodarowanie przestrzeni cmentarza. Mogli w nim wziąć udział wyłącznie architekci żydowskiego pochodzenia, przewidziano nagrody finansowe dla trzech najlepszych projektów, dwa dowolne gmina zamierzała kupić od autorów.  W warunkach konkursu określono, że dominującym budynkiem ma być właśnie hala przedpogrzebowa, której należało nadać odpowiedni, monumentalny charakter. Bardzo dokładnie wymieniono też pomieszczenia służące ceremonii, jakie należało zaplanować. Były to: sale dla rabina i kapłana, pomieszczenia do mycia zwłok, kostnica i sala modlitwy. W konkursie nagrodzono i wybrano do realizacji projekt krakowskiego architekta Adolfa Siódmaka.  We wrześniu roku 1922 gotowe były już plany realizacyjne budynku, rozpoczęto też starania o zatwierdzenie projektu przez władze miasta i wydanie zgody na budowę.  Do budowy przystąpiono w roku 1926.",
+          "contentBottom": " Hala składała się z trzech części, z których środkowa, najwyższa mierzyła 25 m wysokości, a każda zwieńczona była kopułą. Całość  ozdobiona została dekoracją w stylu orientalnym, do wnętrza prowadził portal zamknięty oślim łukiem. Dziś jeszcze możemy zobaczyć fragmenty rzeźbionej dekoracji znajdującej się pierwotnie nad tym właśnie portalem, wyraźnie widoczne są ornamenty w postaci liści, wisienek, gwiazd Dawida. Wnętrze budynku miało zostać ozdobione malowidłami, jednak nie wiadomo, co dokładnie przedstawiała dekoracja. Otwarcie cmentarza i domu przedpogrzebowego nastąpiło 6 kwietnia 1932 roku i mimo, że prace nie były jeszcze ukończone, dzień ten był wielkim świętem dla całej gminy żydowskiej. Na zdjęciach z ceremonii widnieje monumentalny i surowy w wyrazie budynek hali. W tym czasie  nie został jeszcze otynkowany, teren wokół pozostawia wiele do życzenia. Z informacji prasowych wiadomo, że dekoracja wnętrza nie była jeszcze gotowa, jednak witraże w oknach zostały zamontowane na czas. Nigdy nie powstała też okazała kolumnada mająca pierwotnie stanąć przed budynkiem, z jej budowy zrezygnowano już wcześniej. Prace przy domu przedpogrzebowym trwały do końca lat 30-tych i nigdy nie zostały dokończone. W czasie wojny budynek odegrał bardzo ważną rolę – w schowku na poddaszu budynku ukryto ok. 150 zwojów Tory oraz różne przedmioty stanowiące wyposażenie krakowskich synagog.   Już we wrześniu 1939 roku zarządzono zamkniecie wszystkich synagog. a w marcu 1941nakazano oddanie kluczy do budynków. Dzięki inicjatywie Jakuba Stendiga udało się zgromadzić całkiem pokaźną ilość przedmiotów wyniesionych z synagog, między innymi zwoje Tory, świeczniki, haftowane tkaniny, naczynia, książki i modlitewniki. Początkowo przechowywano je w budynku Gminy Żydowskiej przy ul. Limanowskiego 2, ale z czasem stało się to zbyt niebezpieczne, gdyż  istniało duże ryzyko odkrycia zbiorów przez Niemców.  Zapadła wiec decyzja o ukryciu wszystkich przedmiotów w kopule domu przedpogrzebowego. Pod pretekstem naprawy dachu, akcji tej dokonali rzemieślnicy mieszkający w getcie.",
+          "icon": "loupe.png",
+          "image": "pre-burial-house.jpg",
+          "location": {
+            "left": 2000,
+            "top": 350
+          },
+          "infoSource": "http://podgorze.pl/dom-przedpogrzebowy-cmentarza-zydowskiego-przy-ul-jerozolimskiej/",
+          "style": {
+            "panel": {
+              "width": 1400,
+              "backgroundColor": "black",
+              "alignItems": "stretch"
+            },
+            "image": {
+              "width": 750,
+              "height": 400,
+              "margin": 15
+            },
+            "contentBeside": {
+              "margin": 10,
+              "color": "white",
+              "width": 550
+            },
+            "contentBottom": {
+              "margin": 10,
+              "color": "white"
+            }
+          }
         },
-        "image": {
-          "width": 750,
-          "height": 400,
-          "margin": 15
-         },
-        "contentBeside": {
-          "margin": 10,
-          "color": "white",
-          "width": 550
+        {
+          "contentBeside": "Wraz z powstaniem nowego cmentarza gminy żydowskiej konieczne stało się wybudowanie hali domu przedpogrzebowego oraz pomieszczeń związanych z administracja cmentarza. Władze gminy bardzo poważnie potraktowały nowe przedsięwzięcie ogłaszając w roku 1920 międzynarodowy konkurs na zagospodarowanie przestrzeni cmentarza. Mogli w nim wziąć udział wyłącznie architekci żydowskiego pochodzenia, przewidziano nagrody finansowe dla trzech najlepszych projektów, dwa dowolne gmina zamierzała kupić od autorów.  W warunkach konkursu określono, że dominującym budynkiem ma być właśnie hala przedpogrzebowa, której należało nadać odpowiedni, monumentalny charakter. Bardzo dokładnie wymieniono też pomieszczenia służące ceremonii, jakie należało zaplanować. Były to: sale dla rabina i kapłana, pomieszczenia do mycia zwłok, kostnica i sala modlitwy. W konkursie nagrodzono i wybrano do realizacji projekt krakowskiego architekta Adolfa Siódmaka.  We wrześniu roku 1922 gotowe były już plany realizacyjne budynku, rozpoczęto też starania o zatwierdzenie projektu przez władze miasta i wydanie zgody na budowę.  Do budowy przystąpiono w roku 1926.",
+          "contentBottom": " Hala składała się z trzech części, z których środkowa, najwyższa mierzyła 25 m wysokości, a każda zwieńczona była kopułą. Całość  ozdobiona została dekoracją w stylu orientalnym, do wnętrza prowadził portal zamknięty oślim łukiem. Dziś jeszcze możemy zobaczyć fragmenty rzeźbionej dekoracji znajdującej się pierwotnie nad tym właśnie portalem, wyraźnie widoczne są ornamenty w postaci liści, wisienek, gwiazd Dawida. Wnętrze budynku miało zostać ozdobione malowidłami, jednak nie wiadomo, co dokładnie przedstawiała dekoracja. Otwarcie cmentarza i domu przedpogrzebowego nastąpiło 6 kwietnia 1932 roku i mimo, że prace nie były jeszcze ukończone, dzień ten był wielkim świętem dla całej gminy żydowskiej. Na zdjęciach z ceremonii widnieje monumentalny i surowy w wyrazie budynek hali. W tym czasie  nie został jeszcze otynkowany, teren wokół pozostawia wiele do życzenia. Z informacji prasowych wiadomo, że dekoracja wnętrza nie była jeszcze gotowa, jednak witraże w oknach zostały zamontowane na czas. Nigdy nie powstała też okazała kolumnada mająca pierwotnie stanąć przed budynkiem, z jej budowy zrezygnowano już wcześniej. Prace przy domu przedpogrzebowym trwały do końca lat 30-tych i nigdy nie zostały dokończone. W czasie wojny budynek odegrał bardzo ważną rolę – w schowku na poddaszu budynku ukryto ok. 150 zwojów Tory oraz różne przedmioty stanowiące wyposażenie krakowskich synagog.   Już we wrześniu 1939 roku zarządzono zamkniecie wszystkich synagog. a w marcu 1941nakazano oddanie kluczy do budynków. Dzięki inicjatywie Jakuba Stendiga udało się zgromadzić całkiem pokaźną ilość przedmiotów wyniesionych z synagog, między innymi zwoje Tory, świeczniki, haftowane tkaniny, naczynia, książki i modlitewniki. Początkowo przechowywano je w budynku Gminy Żydowskiej przy ul. Limanowskiego 2, ale z czasem stało się to zbyt niebezpieczne, gdyż  istniało duże ryzyko odkrycia zbiorów przez Niemców.  Zapadła wiec decyzja o ukryciu wszystkich przedmiotów w kopule domu przedpogrzebowego. Pod pretekstem naprawy dachu, akcji tej dokonali rzemieślnicy mieszkający w getcie.",
+          "image": "pre-burial-house.jpg",
+          "icon": "loupe.png",
+          "style": {
+            "panel": {
+              "width": 1400,
+              "backgroundColor": "black",
+              "alignItems": "stretch"
+            },
+            "image": {
+              "width": 750,
+              "height": 400,
+              "margin": 15
+            },
+            "contentBeside": {
+              "margin": 10,
+              "color": "white",
+              "width": 550
+            },
+            "contentBottom": {
+              "margin": 10,
+              "color": "white"
+            }
+          }
         },
-        "contentBottom": {
-          "margin": 10,
-          "color": "white"
+        {
+          "renderType": "manual",
+          "children": [{
+            "type": "View"
+          }]
         }
-      }
+      ]
     }
   ],
   "doors": [{

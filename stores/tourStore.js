@@ -1,13 +1,14 @@
 import alt from '../alt';
-import TourActions from '../actions/tourActions'
+import TourActions from '../actions/tourActions';
 
 class TourStore {
-  constructor(){
+  constructor() {
     this.state = {
       isFetching: true,
       step: null,
       displayInfoPanel: false,
       idx: 0,
+      infoPanelSection: 0,
     };
     this.bindActions(TourActions);
     this.exportPublicMethods({
@@ -32,16 +33,12 @@ class TourStore {
   }
 
   onNavigateTo() {
-    this.setState({ isFetching: true })
-  }
-
-  onNavigateToError(error){
-      //todo
+    this.setState({ isFetching: true });
   }
 
   onNavigateToSuccess(step) {
-    console.log('onNavigateToSuccess', step)
-    this.setState({ step, isFetching: false })
+    console.log('onNavigateToSuccess', step);
+    this.setState({ step, isFetching: false });
   }
 
   displayInfoPanelStatus() {
@@ -49,16 +46,16 @@ class TourStore {
   }
 
   getInfoPanelData() {
-    return this.state.step ? this.state.step.infoPanels[this.state.idx] : null; 
+    return this.state.step ? this.state.step.infoPanels[this.state.idx] : null;
   }
 
   onDisplayInfoPanelSuccess(idx) {
-    this.setState({idx})
+    this.setState({ idx });
   }
 
-  onHideInfoPanel(){
-    console.log('xxx')
-    this.setState({displayInfoPanel: false})
+  onHideInfoPanel() {
+    console.log('xxx');
+    this.setState({ displayInfoPanel: false });
   }
 }
 export default alt.createStore(TourStore, 'TourStore');

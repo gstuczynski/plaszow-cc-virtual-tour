@@ -10,5 +10,14 @@
       "top": 40
     }
   }
-  ]
+  ],
+  "doors": [{
+    "sceneId": "bonarka1",
+    "preview": "bimg.jpg",
+    "title": "Część administracyjno wojskowa",
+    "location": {
+      "left": 3750,
+      "top": 200
+    }
+  }]
 }

@@ -21,7 +21,9 @@ class MapPanelButton extends React.Component {
         onClick={() => TourActions.displayMap()}
         style={{
           flexDirection: 'row',
-          transform: [/*{ translateY: 0 }, { translateX: 1380 }*/],
+          transform: [
+            /* { translateY: 0 }, { translateX: 1380 } */
+          ],
         }}>
         <Image style={styles.image} source={asset('icons/map.png')} />
       </VrButton>

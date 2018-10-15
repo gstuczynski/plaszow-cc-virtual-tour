@@ -3,7 +3,6 @@ import { AppRegistry, View, Text, StyleSheet, NativeModules, assert } from "reac
 
 import SceneManager from "./components/SceneManager.js";
 import InfoPanel from "./components/InfoPanel.js";
-import CloseButton from "./components/CloseButton.js";
 
 
 import config from './tour_config/config.json';
