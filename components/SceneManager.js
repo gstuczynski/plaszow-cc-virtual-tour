@@ -76,12 +76,7 @@ class SceneManager extends React.Component {
 
   renderInfoPanels = (infoPanels = []) => {
     return infoPanels.map((infoPanel, idx) => {
-      if (!infoPanel.sections) {
-        return this.renderPanel(infoPanel, idx);
-      } else {
-        console.log('else', infoPanel);
-        return this.renderPanel(infoPanel.sections[0], idx);
-      }
+      return this.renderPanel(infoPanel, idx);
     });
   };
 

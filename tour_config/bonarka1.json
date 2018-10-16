@@ -3,96 +3,141 @@
   "uri": "bonarka-01.jpg",
   "sceneId": "bonarka1",
   "infoPanels": [{
-      "content": "dupa1",
-      "icon": "loupe.png",
-      "img": "bimg.jpg",
-      "style": {
-        "image": {
-          "width": 800,
-          "height": 800,
-          "textAlign": "left"
-        },
-        "panelText": {
-          "width": 750,
-          "height": 800,
-          "textAlign": "left",
-          "color": "white"
-        }
-      },
-      "location": {
-        "left": 3180,
-        "top": 250
-      }
+    "location": {
+      "left": 2000,
+      "top": 350
     },
-    {
-      "sections": [{
-          "contentBeside": "Wraz z powstaniem nowego cmentarza gminy żydowskiej konieczne stało się wybudowanie hali domu przedpogrzebowego oraz pomieszczeń związanych z administracja cmentarza. Władze gminy bardzo poważnie potraktowały nowe przedsięwzięcie ogłaszając w roku 1920 międzynarodowy konkurs na zagospodarowanie przestrzeni cmentarza. Mogli w nim wziąć udział wyłącznie architekci żydowskiego pochodzenia, przewidziano nagrody finansowe dla trzech najlepszych projektów, dwa dowolne gmina zamierzała kupić od autorów.  W warunkach konkursu określono, że dominującym budynkiem ma być właśnie hala przedpogrzebowa, której należało nadać odpowiedni, monumentalny charakter. Bardzo dokładnie wymieniono też pomieszczenia służące ceremonii, jakie należało zaplanować. Były to: sale dla rabina i kapłana, pomieszczenia do mycia zwłok, kostnica i sala modlitwy. W konkursie nagrodzono i wybrano do realizacji projekt krakowskiego architekta Adolfa Siódmaka.  We wrześniu roku 1922 gotowe były już plany realizacyjne budynku, rozpoczęto też starania o zatwierdzenie projektu przez władze miasta i wydanie zgody na budowę.  Do budowy przystąpiono w roku 1926.",
-          "contentBottom": " Hala składała się z trzech części, z których środkowa, najwyższa mierzyła 25 m wysokości, a każda zwieńczona była kopułą. Całość  ozdobiona została dekoracją w stylu orientalnym, do wnętrza prowadził portal zamknięty oślim łukiem. Dziś jeszcze możemy zobaczyć fragmenty rzeźbionej dekoracji znajdującej się pierwotnie nad tym właśnie portalem, wyraźnie widoczne są ornamenty w postaci liści, wisienek, gwiazd Dawida. Wnętrze budynku miało zostać ozdobione malowidłami, jednak nie wiadomo, co dokładnie przedstawiała dekoracja. Otwarcie cmentarza i domu przedpogrzebowego nastąpiło 6 kwietnia 1932 roku i mimo, że prace nie były jeszcze ukończone, dzień ten był wielkim świętem dla całej gminy żydowskiej. Na zdjęciach z ceremonii widnieje monumentalny i surowy w wyrazie budynek hali. W tym czasie  nie został jeszcze otynkowany, teren wokół pozostawia wiele do życzenia. Z informacji prasowych wiadomo, że dekoracja wnętrza nie była jeszcze gotowa, jednak witraże w oknach zostały zamontowane na czas. Nigdy nie powstała też okazała kolumnada mająca pierwotnie stanąć przed budynkiem, z jej budowy zrezygnowano już wcześniej. Prace przy domu przedpogrzebowym trwały do końca lat 30-tych i nigdy nie zostały dokończone. W czasie wojny budynek odegrał bardzo ważną rolę – w schowku na poddaszu budynku ukryto ok. 150 zwojów Tory oraz różne przedmioty stanowiące wyposażenie krakowskich synagog.   Już we wrześniu 1939 roku zarządzono zamkniecie wszystkich synagog. a w marcu 1941nakazano oddanie kluczy do budynków. Dzięki inicjatywie Jakuba Stendiga udało się zgromadzić całkiem pokaźną ilość przedmiotów wyniesionych z synagog, między innymi zwoje Tory, świeczniki, haftowane tkaniny, naczynia, książki i modlitewniki. Początkowo przechowywano je w budynku Gminy Żydowskiej przy ul. Limanowskiego 2, ale z czasem stało się to zbyt niebezpieczne, gdyż  istniało duże ryzyko odkrycia zbiorów przez Niemców.  Zapadła wiec decyzja o ukryciu wszystkich przedmiotów w kopule domu przedpogrzebowego. Pod pretekstem naprawy dachu, akcji tej dokonali rzemieślnicy mieszkający w getcie.",
-          "icon": "loupe.png",
-          "image": "pre-burial-house.jpg",
-          "location": {
-            "left": 2000,
-            "top": 350
+    "icon": "loupe.png",
+    "sections": [{
+        "type": "View",
+        "linkToSource": "http://podgorze.pl/dom-przedpogrzebowy-cmentarza-zydowskiego-przy-ul-jerozolimskiej/",
+        "props": {
+          "style": {
+            "width": 1440,
+            "backgroundColor": "black"
+          }
+        },
+        "children": [{
+          "type": "View",
+          "props": {
+            "style": {
+              "flexDirection": "row"
+            }
           },
-          "infoSource": "http://podgorze.pl/dom-przedpogrzebowy-cmentarza-zydowskiego-przy-ul-jerozolimskiej/",
-          "style": {
-            "panel": {
-              "width": 1400,
-              "backgroundColor": "black",
-              "alignItems": "stretch"
-            },
-            "image": {
-              "width": 750,
-              "height": 400,
-              "margin": 15
-            },
-            "contentBeside": {
-              "margin": 10,
-              "color": "white",
-              "width": 550
-            },
-            "contentBottom": {
-              "margin": 10,
-              "color": "white"
-            }
-          }
-        },
-        {
-          "contentBeside": "Wraz z powstaniem nowego cmentarza gminy żydowskiej konieczne stało się wybudowanie hali domu przedpogrzebowego oraz pomieszczeń związanych z administracja cmentarza. Władze gminy bardzo poważnie potraktowały nowe przedsięwzięcie ogłaszając w roku 1920 międzynarodowy konkurs na zagospodarowanie przestrzeni cmentarza. Mogli w nim wziąć udział wyłącznie architekci żydowskiego pochodzenia, przewidziano nagrody finansowe dla trzech najlepszych projektów, dwa dowolne gmina zamierzała kupić od autorów.  W warunkach konkursu określono, że dominującym budynkiem ma być właśnie hala przedpogrzebowa, której należało nadać odpowiedni, monumentalny charakter. Bardzo dokładnie wymieniono też pomieszczenia służące ceremonii, jakie należało zaplanować. Były to: sale dla rabina i kapłana, pomieszczenia do mycia zwłok, kostnica i sala modlitwy. W konkursie nagrodzono i wybrano do realizacji projekt krakowskiego architekta Adolfa Siódmaka.  We wrześniu roku 1922 gotowe były już plany realizacyjne budynku, rozpoczęto też starania o zatwierdzenie projektu przez władze miasta i wydanie zgody na budowę.  Do budowy przystąpiono w roku 1926.",
-          "contentBottom": " Hala składała się z trzech części, z których środkowa, najwyższa mierzyła 25 m wysokości, a każda zwieńczona była kopułą. Całość  ozdobiona została dekoracją w stylu orientalnym, do wnętrza prowadził portal zamknięty oślim łukiem. Dziś jeszcze możemy zobaczyć fragmenty rzeźbionej dekoracji znajdującej się pierwotnie nad tym właśnie portalem, wyraźnie widoczne są ornamenty w postaci liści, wisienek, gwiazd Dawida. Wnętrze budynku miało zostać ozdobione malowidłami, jednak nie wiadomo, co dokładnie przedstawiała dekoracja. Otwarcie cmentarza i domu przedpogrzebowego nastąpiło 6 kwietnia 1932 roku i mimo, że prace nie były jeszcze ukończone, dzień ten był wielkim świętem dla całej gminy żydowskiej. Na zdjęciach z ceremonii widnieje monumentalny i surowy w wyrazie budynek hali. W tym czasie  nie został jeszcze otynkowany, teren wokół pozostawia wiele do życzenia. Z informacji prasowych wiadomo, że dekoracja wnętrza nie była jeszcze gotowa, jednak witraże w oknach zostały zamontowane na czas. Nigdy nie powstała też okazała kolumnada mająca pierwotnie stanąć przed budynkiem, z jej budowy zrezygnowano już wcześniej. Prace przy domu przedpogrzebowym trwały do końca lat 30-tych i nigdy nie zostały dokończone. W czasie wojny budynek odegrał bardzo ważną rolę – w schowku na poddaszu budynku ukryto ok. 150 zwojów Tory oraz różne przedmioty stanowiące wyposażenie krakowskich synagog.   Już we wrześniu 1939 roku zarządzono zamkniecie wszystkich synagog. a w marcu 1941nakazano oddanie kluczy do budynków. Dzięki inicjatywie Jakuba Stendiga udało się zgromadzić całkiem pokaźną ilość przedmiotów wyniesionych z synagog, między innymi zwoje Tory, świeczniki, haftowane tkaniny, naczynia, książki i modlitewniki. Początkowo przechowywano je w budynku Gminy Żydowskiej przy ul. Limanowskiego 2, ale z czasem stało się to zbyt niebezpieczne, gdyż  istniało duże ryzyko odkrycia zbiorów przez Niemców.  Zapadła wiec decyzja o ukryciu wszystkich przedmiotów w kopule domu przedpogrzebowego. Pod pretekstem naprawy dachu, akcji tej dokonali rzemieślnicy mieszkający w getcie.",
-          "image": "pre-burial-house.jpg",
-          "icon": "loupe.png",
-          "style": {
-            "panel": {
-              "width": 1400,
-              "backgroundColor": "black",
-              "alignItems": "stretch"
-            },
-            "image": {
-              "width": 750,
-              "height": 400,
-              "margin": 15
-            },
-            "contentBeside": {
-              "margin": 10,
-              "color": "white",
-              "width": 550
-            },
-            "contentBottom": {
-              "margin": 10,
-              "color": "white"
-            }
-          }
-        },
-        {
-          "renderType": "manual",
           "children": [{
-            "type": "View"
-          }]
-        }
-      ]
-    }
-  ],
+              "type": "Image",
+              "props": {
+                "source": "pre-burial-house.jpg",
+                "style": {
+                  "width": 600,
+                  "height": 450,
+                  "margin": 10
+                }
+              }
+            },
+            {
+              "type": "Text",
+              "props": {
+                "content": "Wraz z powstaniem nowego cmentarza gminy żydowskiej konieczne stało się wybudowanie hali domu przedpogrzebowego oraz pomieszczeń związanych z administracja cmentarza. Władze gminy bardzo poważnie potraktowały nowe przedsięwzięcie ogłaszając w roku 1920 międzynarodowy konkurs na zagospodarowanie przestrzeni cmentarza. Mogli w nim wziąć udział wyłącznie architekci żydowskiego pochodzenia, przewidziano nagrody finansowe dla trzech najlepszych projektów, dwa dowolne gmina zamierzała kupić od autorów.  W warunkach konkursu określono, że dominującym budynkiem ma być właśnie hala przedpogrzebowa, której należało nadać odpowiedni, monumentalny charakter. Bardzo dokładnie wymieniono też pomieszczenia służące ceremonii, jakie należało zaplanować. Były to: sale dla rabina i kapłana, pomieszczenia do mycia zwłok, kostnica i sala modlitwy. W konkursie nagrodzono i wybrano do realizacji projekt krakowskiego architekta Adolfa Siódmaka.  We wrześniu roku 1922 gotowe były już plany realizacyjne budynku, rozpoczęto też starania o zatwierdzenie projektu przez władze miasta i wydanie zgody na budowę.  Do budowy przystąpiono w roku 1926. Hala składała się z trzech części, z których środkowa, najwyższa mierzyła 25 m wysokości, a każda zwieńczona była kopułą. Całość  ozdobiona została dekoracją w stylu orientalnym, do wnętrza prowadził portal zamknięty oślim łukiem. ",
+                "style": {
+                  "width": 760,
+                  "marginLeft": 15,
+                  "marginTop": 10,
+                  "fontSize": 22
+                }
+              }
+            }
+          ]
+        }, {
+          "type": "Text",
+          "props": {
+            "content": "Dziś jeszcze możemy zobaczyć fragmenty rzeźbionej dekoracji znajdującej się pierwotnie nad tym właśnie portalem, wyraźnie widoczne są ornamenty w postaci liści, wisienek, gwiazd Dawida. Wnętrze budynku miało zostać ozdobione malowidłami, jednak nie wiadomo, co dokładnie przedstawiała dekoracja. Otwarcie cmentarza i domu przedpogrzebowego nastąpiło 6 kwietnia 1932 roku i mimo, że prace nie były jeszcze ukończone, dzień ten był wielkim świętem dla całej gminy żydowskiej. Na zdjęciach z ceremonii widnieje monumentalny i surowy w wyrazie budynek hali. W tym czasie  nie został jeszcze otynkowany, teren wokół pozostawia wiele do życzenia. Z informacji prasowych wiadomo, że dekoracja wnętrza nie była jeszcze gotowa, jednak witraże w oknach zostały zamontowane na czas. Nigdy nie powstała też okazała kolumnada mająca pierwotnie stanąć przed budynkiem, z jej budowy zrezygnowano już wcześniej. Prace przy domu przedpogrzebowym trwały do końca lat 30-tych i nigdy nie zostały dokończone. W czasie wojny budynek odegrał bardzo ważną rolę – w schowku na poddaszu budynku ukryto ok. 150 zwojów Tory oraz różne przedmioty stanowiące wyposażenie krakowskich synagog.   Już we wrześniu 1939 roku zarządzono zamkniecie wszystkich synagog. a w marcu 1941nakazano oddanie kluczy do budynków. Dzięki inicjatywie Jakuba Stendiga udało się zgromadzić całkiem pokaźną ilość przedmiotów wyniesionych z synagog, między innymi zwoje Tory, świeczniki, haftowane tkaniny, naczynia, książki i modlitewniki. Początkowo przechowywano je w budynku Gminy Żydowskiej przy ul. Limanowskiego 2, ale z czasem stało się to zbyt niebezpieczne, gdyż  istniało duże ryzyko odkrycia zbiorów przez Niemców.  Zapadła wiec decyzja o ukryciu wszystkich przedmiotów w kopule domu przedpogrzebowego. Pod pretekstem naprawy dachu, akcji tej dokonali rzemieślnicy mieszkający w getcie.",
+            "style": {
+              "marginLeft": 10,
+              "marginRight": 10,
+              "marginBottom": 50,
+              "fontSize": 22
+            }
+          }
+        }]
+      },
+      {
+        "type": "View",
+        "props": {
+          "style": {
+            "width": 1440,
+            "backgroundColor": "black",
+            "height": 800
+          }
+        },
+        "children": [{
+            "type": "View",
+            "props": {
+              "style": {
+                "flexDirection": "row"
+              }
+            },
+            "children": [{
+                "type": "Text",
+                "props": {
+                  "content": "Gdy w roku 1943 roku komendantem obozu został Amon Goeth, na jego polecenie budynek zaadaptowano na stajnię dla koni i chlew dla świń.  Rok później podjęto decyzję o wysadzeniu budynku w powietrze, być może miało to związek z budową linii kolejowej do obozu. Komendant urządził z tego wydarzenia widowisko, na które zaprosił przedstawicieli władz oraz znajomych. Zachowała się seria zdjęć dokumentujących wysadzanie budynku. Szczęśliwie zniszczeniu nie uległo zachodnie skrzydło hali, w którym ukryte były cenne przedmioty wyniesione z synagog. Niestety, z czasem, szukając możliwości użytkowania ocalałej części budynku, polecono wybić drzwi do schowka, w którym ukryte były przedmioty liturgiczne. Część od razu spalono, inne wywieziono w głąb Niemiec, niszcząc zabytkową i wartościową kolekcję kultury żydowskiej.  Zachodnie skrzydło używane było do końca wojny, widać je jeszcze na powojennych zdjęciach, zachowane w całkiem dobrym stanie.",
+                  "style": {
+                    "width": 760,
+                    "marginLeft": 15,
+                    "marginTop": 10,
+                    "fontSize": 22,
+                    "fontStyle": "italic"
+                  }
+                }
+              },
+              {
+                "type": "Image",
+                "props": {
+                  "source": "pre-burial-house2.jpg",
+                  "style": {
+                    "width": 550,
+                    "height": 420,
+                    "margin": 10
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "View",
+            "children": [{
+                "type": "Image",
+                "props": {
+                  "source": "pre-burial-house3.jpg",
+                  "style": {
+                    "marginLeft": 50,
+                    "marginRight": 10,
+                    "marginBottom": 10,
+                    "width": 500,
+                    "height": 320
+                  }
+                }
+              },
+              {
+                "type": "Image",
+                "props": {
+                  "source": "pre-burial-house4.jpg",
+                  "style": {
+                    "position": "absolute",
+                    "width": 500,
+                    "height": 320,
+                    "right": 100
+                  }
+                }
+              }
+
+
+            ]
+          }
+        ]
+      }
+    ]
+  }],
   "doors": [{
     "sceneId": "bonarka2",
     "preview": "bimg.jpg",
@@ -101,38 +146,6 @@
       "left": 1500,
       "top": 200
     }
-  }],
-  "hints": [{
-      "description": "Main scene",
-      "location": {
-        "left": 220,
-        "top": 40
-      }
-    },
-    {
-      "description": "DJ's place",
-      "location": {
-        "left": 80,
-        "top": 80
-      }
-    }
-  ],
+  }]
 
-  "tooltips": [{
-      "text": "Bonarka Wejście 2",
-      "translateX": -60,
-      "translateY": 20,
-      "linkedPhotoId": "bonarka2"
-    },
-    {
-      "type": "panelimage",
-      "title": "Staw Bonarka",
-      "text": "Staw ten i przyległe zarośla to jedno z najbogatszych i najbardziej atrakcyjnych pod względem ornitologicznym miejsc w Krakowie. Swoje siedliska założyły tu rzadkie perkozy dwuczube, perkoziki, łyski, kokoszki wodne i krzyżówki. Największe emocje budzi jednak obecność bączka, chronionego w Europie ptaka, wpisanego na polską czerwoną listę gatunków zagrożonych wyginięciem, objętego dyrektywami Unii Europejskiej. Bączek, najmniejsza europejska czapla, od lat wiosną przylatuje na stawy Bonarki i tu gniazduje.",
-      "translateX": 100,
-      "translateY": -70,
-      "width": 3,
-      "height": 1,
-      "source": "staw_bonarka.png"
-    }
-  ]
 }

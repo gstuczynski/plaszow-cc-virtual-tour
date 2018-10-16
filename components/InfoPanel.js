@@ -19,7 +19,7 @@ import Arrow from './Arrow';
 import connectToStores from '../connectToStores';
 import TourStore from '../stores/tourStore';
 import TourActions from '../actions/tourActions';
-import renderFromJson from '../utils/renderFromJson'
+import renderFromJson from '../utils/renderFromJson';
 
 const storeConnector = {
   TourStore(Store) {
@@ -93,49 +93,17 @@ class InfoPanel extends React.Component {
       return null;
     }
 
-    let contentBeside;
-    let contentBottom;
-    let image;
-    let style;
-    let numberOfSections = false;
-    let video;
-    let infoSource;
-
-
-
-    if (infoPanel && infoPanel.sections) {
-      console.log('ss', infoPanel.sections[this.state.section]);
-      contentBeside = infoPanel.sections[this.state.section].contentBeside;
-      contentBottom = infoPanel.sections[this.state.section].contentBottom;
-      image = infoPanel.sections[this.state.section].image;
-      video = infoPanel.sections[this.state.section].video;
-      style = infoPanel.sections[this.state.section].style;
-      infoSource = infoPanel.sections[this.state.section].infoSource;
-      numberOfSections = infoPanel.sections.length;
-    } else {
-      contentBeside = infoPanel ? infoPanel.contentBeside : null;
-      contentBottom = infoPanel ? infoPanel.contentBottom : null;
-      infoSource = infoPanel ? infoPanel.infoSource : null;
-      image = infoPanel ? infoPanel.image : null;
-      style = infoPanel ? infoPanel.style : {};
-    }
-
-    const panelStyle = _.extend({}, style, { position: 'relative' });
+    const numberOfSections = infoPanel.sections.length;
+    const linkToSource = infoPanel.sections[this.state.section].linkToSource;
 
     return (
-      <View style={style.panel}>
-      {}
-        {video && <VideoTooltip style={style.image} source={asset(`videos/${video}`)} />}
-        <View style={{ flexDirection: 'row' }}>
-          {image && <Image style={style.image} source={asset(`images/${image}`)} />}
-          <Text style={style.contentBeside}>{`${contentBeside}`}</Text>
-        </View>
-        <Text style={style.contentBottom}>{`${contentBottom}`}</Text>
+      <View>
+        {renderFromJson(infoPanel.sections[this.state.section])}
         <VrButton style={styles.close} onClick={() => TourActions.hideInfoPanel()}>
           <Image style={styles.close} source={asset('icons/close-button.png')} />
         </VrButton>
-        {infoSource && <Text style={styles.infoSource}>{`${infoSource}`}</Text>}
-        {numberOfSections && this.arrows.map(this.renderArrow.bind(null, numberOfSections))}
+        {numberOfSections > 1 && this.arrows.map(this.renderArrow.bind(null, numberOfSections))}
+        {linkToSource && <Text style={{position:"absolute", bottom: 10, right: 10, margin: 10}} >{linkToSource}</Text>}
       </View>
     );
   }
