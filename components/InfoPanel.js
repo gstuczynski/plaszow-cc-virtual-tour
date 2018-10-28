@@ -94,16 +94,26 @@ class InfoPanel extends React.Component {
     }
 
     const numberOfSections = infoPanel.sections.length;
-    const linkToSource = infoPanel.sections[this.state.section].linkToSource;
+    const infoSource = infoPanel.sections[this.state.section].infoSource;
+    const title = infoPanel.title;
 
     return (
       <View>
+        {title && (
+          <Text style={{ backgroundColor: 'grey', fontSize: 28, textAlign: 'center' }}>
+            {title}
+          </Text>
+        )}
         {renderFromJson(infoPanel.sections[this.state.section])}
+        {numberOfSections > 1 && this.arrows.map(this.renderArrow.bind(null, numberOfSections))}
+        {infoSource && (
+          <Text style={{ position: 'absolute', bottom: 10, right: 10, margin: 10 }}>
+            {infoSource}
+          </Text>
+        )}
         <VrButton style={styles.close} onClick={() => TourActions.hideInfoPanel()}>
           <Image style={styles.close} source={asset('icons/close-button.png')} />
         </VrButton>
-        {numberOfSections > 1 && this.arrows.map(this.renderArrow.bind(null, numberOfSections))}
-        {linkToSource && <Text style={{position:"absolute", bottom: 10, right: 10, margin: 10}} >{linkToSource}</Text>}
       </View>
     );
   }
@@ -140,8 +150,9 @@ const styles = {
     position: 'absolute',
     width: 50,
     height: 50,
-    top: 0,
+    top: 20,
     right: 0,
+    zIndex: 100,
   },
   arrowLeft: {
     position: 'absolute',

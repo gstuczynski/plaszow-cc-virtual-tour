@@ -3,6 +3,7 @@
   "uri": "bonarka-01.jpg",
   "sceneId": "bonarka1",
   "infoPanels": [{
+    "title": "Dom przedpogrzebowy",
     "location": {
       "left": 2000,
       "top": 350
@@ -10,11 +11,12 @@
     "icon": "loupe.png",
     "sections": [{
         "type": "View",
-        "linkToSource": "http://podgorze.pl/dom-przedpogrzebowy-cmentarza-zydowskiego-przy-ul-jerozolimskiej/",
+        "infoSource": "http://podgorze.pl/dom-przedpogrzebowy-cmentarza-zydowskiego-przy-ul-jerozolimskiej/",
         "props": {
           "style": {
             "width": 1440,
-            "backgroundColor": "black"
+            "backgroundColor": "black",
+            "height": 800
           }
         },
         "children": [{
@@ -66,8 +68,7 @@
         "props": {
           "style": {
             "width": 1440,
-            "backgroundColor": "black",
-            "height": 800
+            "backgroundColor": "black"
           }
         },
         "children": [{
@@ -105,6 +106,11 @@
           },
           {
             "type": "View",
+            "props": {
+              "style": {
+                "height": 360
+              }
+            },
             "children": [{
                 "type": "Image",
                 "props": {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppRegistry, StyleSheet, asset, Image, VrButton } from 'react-360';
+import Entity from 'Entity';
 
 import connectToStores from '../connectToStores';
 import TourStore from '../stores/tourStore';
@@ -18,14 +19,8 @@ class MapPanelButton extends React.Component {
     console.log('close button props', this.props);
     return (
       <VrButton
-        onClick={() => TourActions.displayMap()}
-        style={{
-          flexDirection: 'row',
-          transform: [
-            /* { translateY: 0 }, { translateX: 1380 } */
-          ],
-        }}>
-        <Image style={styles.image} source={asset('icons/map.png')} />
+        onClick={() => TourActions.displayMap()}>
+        <Entity source={{obj: asset('3dmodels/earth.obj'), mtl: asset('3dmodels/earth.mtl')} } />
       </VrButton>
     );
   }

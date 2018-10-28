@@ -3,15 +3,15 @@
         {
             "sceneId": "bonarka1",
             "location": {
-                "top": 20
-                
+                "top": 150,
+                "left": 550                
             }
         },
         {
             "sceneId": "bonarka2",
             "location": {
-                "top": 100,
-                "left": -3
+                "top": 190,
+                "left": 605
             }            
         }
     ]

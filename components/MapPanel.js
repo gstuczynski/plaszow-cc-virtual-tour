@@ -40,14 +40,14 @@ class MapPanel extends React.Component {
           }
           if (pin.sceneId === this.props.stepData.sceneId) {
             return (
-              <View style={pinStyle}>
-                <Text>You are here!</Text>
-              </View>
+              <VrButton style={pinStyle} disabled={true} onClick={() => this.handlePinClick(pin.sceneId)}>
+                <Image style={styles.pinImage} source={asset('icons/pin-youarehere.svg')} />
+              </VrButton>
             );
           } else {
             return (
               <VrButton style={pinStyle} onClick={() => this.handlePinClick(pin.sceneId)}>
-                <Image style={styles.pinImage} source={asset('icons/pin.jpg')} />
+                <Image style={styles.pinImage} source={asset('icons/pin.svg')} />
               </VrButton>
             );
           }
@@ -71,15 +71,14 @@ const styles = {
     height: 800,
   },
   pin: {
-    width: 20,
-    height: 20,
+    width: 40,
+    height: 40,
     position: 'absolute',
-    // zIndex: 100,
     top: 10,
   },
   pinImage: {
-    width: 20,
-    height: 20,
+    width: 80,
+    height: 80,
   },
   close: {
     position: 'absolute',
