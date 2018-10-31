@@ -9,6 +9,7 @@ import Door from './Door';
 import MapPanelButton from './MapPanelButton';
 import MapPanel from './MapPanel';
 import Test3d from './Test3d';
+import ControlButtons3d from './ControlButtons3d';
 
 
 import connectToStores from '../connectToStores';

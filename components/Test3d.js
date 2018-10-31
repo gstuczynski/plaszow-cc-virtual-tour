@@ -19,7 +19,7 @@ class Test3d extends React.Component {
   render() {
     return (
         <View>
-        {/*<Entity source={{obj: asset('3dmodels/Z3_OBJ.obj')}} />*/}
+        {<Entity source={{obj: asset('3dmodels/tomb/tomb.obj'), mtl:asset('3dmodels/tomb/tomb.mtl')}} />}
         <Text>ssdsd</Text>
         </View>
     );

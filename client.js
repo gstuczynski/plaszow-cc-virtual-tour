@@ -88,6 +88,9 @@ function init(bundle, parent, options = {}) {
 
   cylinderSurface.setRadius(360);
   r360.renderToLocation(r360.createRoot('MapPanelButton'), mapButtonLocation)
+  r360.renderToLocation(r360.createRoot('Test3d'), new Location([0, -1, -2]))
+  r360.renderToLocation(r360.createRoot('ControlButtons3d'), new Location([0, -5, -4]))
+
 
 
   r360.renderToSurface(r360.createRoot('TemplateTour'), cylinderSurface);
