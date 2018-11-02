@@ -3,6 +3,7 @@ import { Math as VRMath, ReactInstance, Surface, Module, Location } from 'react-
 const infoPanel = new Surface(1440, 850, Surface.SurfaceShape.Flat);
 const mapPanel = new Surface(850, 800, Surface.SurfaceShape.Flat);
 const mapPanelButton = new Surface(1400, 50, Surface.SurfaceShape.Flat);
+const controlButtons3d = new Surface(400, 400, Surface.SurfaceShape.Flat);
 const cylinderSurface = new Surface(4096, 720, Surface.SurfaceShape.Cylinder);
 const mapButtonLocation = new Location([100, 40, -180])
 
@@ -76,7 +77,7 @@ function init(bundle, parent, options = {}) {
      // const z = -mcx * Math.sin(horizAngle) * Math.cos(vertAngle) + mcy * Math.sin(vertAngle) + mcz * Math.cos(vertAngle) * Math.cos(horizAngle);
       
      
-     mapButtonLocation.setWorldPosition(mcx, mcy, mcz );
+      mapButtonLocation.setWorldPosition(mcx, mcy, mcz );
       //mapButtonLocation.setWorldRotation(mcx, mcy, mcz, 0 );
       //console.log('horizAngle', horizAngle, 'vertAngle', vertAngle)
 
@@ -89,9 +90,10 @@ function init(bundle, parent, options = {}) {
   cylinderSurface.setRadius(360);
   r360.renderToLocation(r360.createRoot('MapPanelButton'), mapButtonLocation)
   r360.renderToLocation(r360.createRoot('Test3d'), new Location([0, -1, -2]))
-  r360.renderToLocation(r360.createRoot('ControlButtons3d'), new Location([0, -5, -4]))
+  //r360.renderToLocation(r360.createRoot('ControlButtons3d'), new Location([0, -2, -2]))
 
 
+  //r360.renderToSurface(r360.createRoot('ControlButtons3d'), controlButtons3d);
 
   r360.renderToSurface(r360.createRoot('TemplateTour'), cylinderSurface);
   r360.renderToSurface(r360.createRoot('InfoPanel'), infoPanel);

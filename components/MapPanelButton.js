@@ -18,9 +18,8 @@ class MapPanelButton extends React.Component {
   render() {
     console.log('close button props', this.props);
     return (
-      <VrButton
-        onClick={() => TourActions.displayMap()}>
-        <Entity source={{obj: asset('3dmodels/earth.obj'), mtl: asset('3dmodels/earth.mtl')} } />
+      <VrButton onClick={() => TourActions.displayMap()}>
+        <Entity source={{ obj: asset('3dmodels/earth.obj'), mtl: asset('3dmodels/earth.mtl') }} />
       </VrButton>
     );
   }

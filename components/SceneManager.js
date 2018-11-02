@@ -11,7 +11,6 @@ import MapPanel from './MapPanel';
 import Test3d from './Test3d';
 import ControlButtons3d from './ControlButtons3d';
 
-
 import connectToStores from '../connectToStores';
 import TourStore from '../stores/tourStore';
 import TourActions from '../actions/tourActions';
@@ -137,6 +136,7 @@ class SceneManager extends React.Component {
           {this.renderHints(this.props.stepData.hints)}
           {this.renderDoors(this.props.stepData.doors)}
           {this.props.stepData.infoPanels && this.renderInfoPanels(this.props.stepData.infoPanels)}
+          <ControlButtons3d />
         </View>
       </View>
     );

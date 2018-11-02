@@ -2,7 +2,6 @@ import React from 'react';
 import { AppRegistry, StyleSheet, asset, Image, VrButton, View, Text } from 'react-360';
 import Entity from 'Entity';
 
-
 import connectToStores from '../connectToStores';
 import TourStore from '../stores/tourStore';
 import TourActions from '../actions/tourActions';
@@ -10,7 +9,7 @@ import TourActions from '../actions/tourActions';
 const storeConnector = {
   TourStore(Store) {
     return {
-      displayInfoPanel: Store.displayInfoPanelStatus(),
+      object3dPosition: Store.getObject3dPosition(),
     };
   },
 };
@@ -18,13 +17,16 @@ const storeConnector = {
 class Test3d extends React.Component {
   render() {
     return (
-        <View>
-        {<Entity source={{obj: asset('3dmodels/tomb/tomb.obj'), mtl:asset('3dmodels/tomb/tomb.mtl')}} />}
-        <Text>ssdsd</Text>
-        </View>
+      <View>
+        {console.log('3dpos', this.props.object3dPosition)}
+        <Entity
+          style={this.props.object3dPosition}
+          source={{ obj: asset('3dmodels/tomb/tomb.obj'), mtl: asset('3dmodels/tomb/tomb.mtl') }}
+        />
+      </View>
     );
   }
-  }
+}
 
 const Test3dWithStore = connectToStores(Test3d, [TourStore], storeConnector);
 

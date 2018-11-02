@@ -9,6 +9,7 @@ class TourStore {
       displayInfoPanel: false,
       idx: 0,
       infoPanelSection: 0,
+      object3dPosition: { transform: [{ translateZ: -15 }, { rotateY: 10 }] },
     };
     this.bindActions(TourActions);
     this.exportPublicMethods({
@@ -17,6 +18,7 @@ class TourStore {
       displayInfoPanelStatus: this.displayInfoPanelStatus,
       getInfoPanelData: this.getInfoPanelData,
       getInfoPanelIdx: this.getInfoPanelIdx,
+      getObject3dPosition: this.getObject3dPosition,
     });
   }
 
@@ -26,6 +28,10 @@ class TourStore {
 
   getInfoPanelIdx() {
     return this.state.idx;
+  }
+
+  getObject3dPosition() {
+    return this.state.object3dPosition;
   }
 
   isFetching() {
@@ -56,6 +62,11 @@ class TourStore {
   onHideInfoPanel() {
     console.log('xxx');
     this.setState({ displayInfoPanel: false });
+  }
+
+  onSet3dObjectPositionSuccess(object3dPosition) {
+
+    this.setState({ object3dPosition });
   }
 }
 export default alt.createStore(TourStore, 'TourStore');

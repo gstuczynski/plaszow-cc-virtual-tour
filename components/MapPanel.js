@@ -40,7 +40,10 @@ class MapPanel extends React.Component {
           }
           if (pin.sceneId === this.props.stepData.sceneId) {
             return (
-              <VrButton style={pinStyle} disabled={true} onClick={() => this.handlePinClick(pin.sceneId)}>
+              <VrButton
+                style={pinStyle}
+                disabled={true}
+                onClick={() => this.handlePinClick(pin.sceneId)}>
                 <Image style={styles.pinImage} source={asset('icons/pin-youarehere.svg')} />
               </VrButton>
             );
