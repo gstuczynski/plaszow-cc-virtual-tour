@@ -1,9 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, asset, Animated } from 'react-360';
+import { func, shape, number } from 'prop-types';
+import { StyleSheet, View, Image, asset, Animated } from 'react-360';
 
 const ANIMATION_DURATION = 500;
 
 export default class Hint extends React.Component {
+  static propTypes = {
+    onClick: func,
+    location: shape({
+      top: number,
+      left: number,
+    }),
+  };
+
   state = {
     infoCardOpacity: new Animated.Value(0),
   };

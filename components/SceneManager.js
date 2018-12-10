@@ -1,16 +1,9 @@
 import React from 'react';
-import { StyleSheet, View, Environment, asset, VrButton, Text, Scene } from 'react-360';
-import _ from 'underscore';
-
-import SceneTitle from './SceneTitle';
+import { View, Environment, asset } from 'react-360';
 import InfoPanelButton from './InfoPanelButton';
 import Hint from './Hint';
 import Door from './Door';
-import MapPanelButton from './MapPanelButton';
-import MapPanel from './MapPanel';
-import Test3d from './Test3d';
-import ControlButtons3d from './ControlButtons3d';
-
+import scenePropTypes from './ScenePropTypes';
 import connectToStores from '../connectToStores';
 import TourStore from '../stores/tourStore';
 import TourActions from '../actions/tourActions';
@@ -26,13 +19,11 @@ const storeConnector = {
 };
 
 class SceneManager extends React.Component {
+  static propTypes = scenePropTypes;
+
   componentDidMount() {
     console.log(this.props.stepData.uri);
     this.updateScene({});
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    // this.updateScene(prevState);
   }
 
   updateScene = prevState => {
@@ -96,47 +87,13 @@ class SceneManager extends React.Component {
     });
   };
 
-  // renderDoors = (doors = []) => {
-  //   return doors.map((door, idx) => {
-  //     const top = door.location.top;
-  //     const left = door.location.left;
-
-  //     const styles = _.extend({}, test.test, { top, left });
-
-  //     return (
-  //       <VrButton key={idx} style={styles} onClick={this.handleDoorClick.bind(this, door.sceneId)}>
-  //         <View>
-  //           <Text>{door.title}</Text>
-  //         </View>
-  //       </VrButton>
-  //     );
-  //   });
-  // };
-
   render() {
-    // const top = this.props.stepData ? this.props.stepData.infoPanel.location.top : 0
-    // const left = this.props.stepData ? this.props.stepData.infoPanel.location.left : 0
-
-    const styles = StyleSheet.create({
-      panel: {
-        width: 200,
-        height: 120,
-        backgroundColor: 'yellow',
-        justifyContent: 'center',
-        alignItems: 'center',
-        // top,
-        // left,
-      },
-    });
-
     return (
       <View style={{ flex: 1, zIndex: -1 }}>
-        {/* {<SceneTitle title={this.props.stepData.uri} />} */}
         <View>
           {this.renderHints(this.props.stepData.hints)}
           {this.renderDoors(this.props.stepData.doors)}
           {this.props.stepData.infoPanels && this.renderInfoPanels(this.props.stepData.infoPanels)}
-          <ControlButtons3d />
         </View>
       </View>
     );

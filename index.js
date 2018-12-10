@@ -1,29 +1,27 @@
-import React from "react";
-import { AppRegistry, View, Text, StyleSheet, NativeModules, assert } from "react-360";
-
-import SceneManager from "./components/SceneManager.js";
-import InfoPanel from "./components/InfoPanel.js";
-import Test3d from "./components/Test3d.js";
-
+import React from 'react';
+import { AppRegistry, Text } from 'react-360';
+import { bool } from 'prop-types';
+import SceneManager from './components/SceneManager.js';
+import InfoPanel from './components/InfoPanel.js';
 
 import config from './tour_config/config.json';
 
 import TourStore from './stores/tourStore';
-import TourActions from "./actions/tourActions";
+import TourActions from './actions/tourActions';
 import connectToStores from './connectToStores';
-
-const BrowserInfo = NativeModules.BrowserInfo;
-
 
 const storeConnector = {
   TourStore(Store) {
     return {
-      isFetching: Store.isFetching()
+      isFetching: Store.isFetching(),
     };
-  }
+  },
 };
 
 class TemplateTour extends React.Component {
+  static propTypes = {
+    isFetching: bool,
+  };
   componentDidMount() {
     TourActions.navigateTo(config.firstStep);
   }
@@ -34,9 +32,9 @@ class TemplateTour extends React.Component {
   }
 }
 
-TemplateTourWithStores = connectToStores(
-  TemplateTour, [TourStore], storeConnector
-);
+const TemplateTourWithStores = connectToStores(TemplateTour, [TourStore], storeConnector);
 
 AppRegistry.registerComponent('TemplateTour', () => TemplateTourWithStores);
-export default TemplateTourWithStores
+AppRegistry.registerComponent('InfoPanel', () => InfoPanel);
+
+export default TemplateTourWithStores;

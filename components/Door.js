@@ -1,4 +1,5 @@
 import React from 'react';
+import { string, func, shape, number } from 'prop-types';
 import { StyleSheet, Text, View, asset, VrButton, Animated } from 'react-360';
 
 const INITIAL_PREVIEW_SIZE = 64;
@@ -6,6 +7,15 @@ const SCALED_PREVIEW_SIZE = 200;
 const PREVIEW_ANIMATION_DURATION = 150;
 
 export default class Door extends React.Component {
+  static propTypes = {
+    onClick: func,
+    location: shape({
+      top: number,
+      left: number,
+    }),
+    title: string,
+    preview: string,
+  };
   state = {
     isOverButton: false,
     isOverPreview: false,

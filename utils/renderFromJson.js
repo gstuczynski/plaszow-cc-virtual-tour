@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, Video, VideoControl, MediaPlayerState, asset } from 'react-360';
+import { View, Text, Image, Video, VideoControl, asset } from 'react-360';
 import { string } from 'prop-types';
 import _ from 'underscore';
 
@@ -14,7 +14,6 @@ TextWrap.propTypes = {
 var Types = { Text, View: View, Image, Video, VideoControl };
 
 const renderFromJson = obj => {
-  console.log('qwqqw', obj);
   let Type;
   if (obj.type === 'Text') {
     Type = TextWrap;

@@ -1,25 +1,45 @@
 import React from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  View,
-  Environment,
-  asset,
-  Text,
-  Image,
-  Animated,
-  VrButton,
-  Video,
-  VideoControl,
-  MediaPlayerState,
-} from 'react-360';
-import _ from 'underscore';
-
+import { View, asset, Text, Image, VrButton } from 'react-360';
+import scenePropTypes from './ScenePropTypes';
 import Arrow from './Arrow';
 import connectToStores from '../connectToStores';
 import TourStore from '../stores/tourStore';
 import TourActions from '../actions/tourActions';
 import renderFromJson from '../utils/renderFromJson';
+
+const styles = {
+  close: {
+    position: 'absolute',
+    width: 50,
+    height: 50,
+    top: 20,
+    right: 1,
+    zIndex: 100,
+  },
+  arrowLeft: {
+    position: 'absolute',
+    width: 40,
+    height: 40,
+    left: 0,
+    padding: 18,
+    top: '50%',
+  },
+  arrowRight: {
+    position: 'absolute',
+    right: 0,
+    width: 40,
+    height: 40,
+    padding: 18,
+    top: '50%',
+  },
+  infoSource: {
+    position: 'absolute',
+    fontSize: 14,
+    fontStyle: 'italic',
+    bottom: 0,
+    right: 10,
+  },
+};
 
 const storeConnector = {
   TourStore(Store) {
@@ -32,6 +52,8 @@ const storeConnector = {
 };
 
 class InfoPanel extends React.Component {
+  static propTypes = scenePropTypes;
+
   constructor() {
     super();
     this.state = {
@@ -81,8 +103,7 @@ class InfoPanel extends React.Component {
     } else if (nextSection < 0) {
       nextSection = numerOfSections;
     }
-    console.log('nextSection', nextSection);
-    this.setState({ section: nextSection });
+    return this.setState({ section: nextSection });
   };
 
   render() {
@@ -98,7 +119,7 @@ class InfoPanel extends React.Component {
     const title = infoPanel.title;
 
     return (
-      <View>
+      <View style={{ width: '100%' }}>
         {title && (
           <Text style={{ backgroundColor: 'grey', fontSize: 28, textAlign: 'center' }}>
             {title}
@@ -119,67 +140,5 @@ class InfoPanel extends React.Component {
   }
 }
 
-class VideoTooltip extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      playerState: new MediaPlayerState({ autoPlay: true, muted: true }),
-    };
-  }
-
-  render() {
-    return (
-      <View>
-        <Video
-          style={{ width: 800, height: 500 }}
-          source={this.props.source}
-          playerState={this.state.playerState}
-        />
-        <VideoControl
-          style={{ width: 800, height: 20 }}
-          fontSize={18}
-          playerState={this.state.playerState}
-        />
-      </View>
-    );
-  }
-}
-
-const styles = {
-  close: {
-    position: 'absolute',
-    width: 50,
-    height: 50,
-    top: 20,
-    right: 0,
-    zIndex: 100,
-  },
-  arrowLeft: {
-    position: 'absolute',
-    width: 40,
-    height: 40,
-    left: 0,
-    padding: 18,
-    top: '50%',
-  },
-  arrowRight: {
-    position: 'absolute',
-    right: 0,
-    width: 40,
-    height: 40,
-    padding: 18,
-    top: '50%',
-  },
-  infoSource: {
-    position: 'absolute',
-    fontSize: 14,
-    fontStyle: 'italic',
-    bottom: 0,
-    right: 10,
-  },
-};
-
 const InfoPanelWithStore = connectToStores(InfoPanel, [TourStore], storeConnector);
-AppRegistry.registerComponent('InfoPanel', () => InfoPanelWithStore);
-
 export default InfoPanelWithStore;

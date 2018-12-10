@@ -16,13 +16,12 @@
         "style": {
           "width": 1440,
           "backgroundColor": "black",
-          "height": 600,
+          "height": 800,
           "flexDirection": "row",
           "position": "relative"
         }
       },
-      "children": [
-        {
+      "children": [{
           "type": "Image",
           "props": {
             "source": "gray-house.jpg",
@@ -50,12 +49,31 @@
     }]
   }],
   "doors": [{
-    "sceneId": "bonarka1",
-    "preview": "bimg.jpg",
-    "title": "Część administracyjno wojskowa",
-    "location": {
-      "left": 3750,
-      "top": 200
+      "sceneId": "bonarka1",
+      "preview": "bimg.jpg",
+      "title": "Część administracyjno wojskowa",
+      "location": {
+        "left": 3750,
+        "top": 200
+      }
+    },
+    {
+      "sceneId": "bonarka3",
+      "preview": "bimg.jpg",
+      "title": "Widok z góry",
+      "location": {
+        "left": 2650,
+        "top": 100
+      }
+    },
+    {
+      "sceneId": "bonarka5",
+      "preview": "bimg.jpg",
+      "title": "Skrzyżowanie",
+      "location": {
+        "left": 3050,
+        "top": 200
+      }
     }
-  }]
+  ]
 }

@@ -1,8 +1,15 @@
 import React from 'react';
-import { asset, Image, VrButton, View } from 'react-360';
+import { string, func, shape, object } from 'prop-types';
+import { Image, VrButton, View } from 'react-360';
 import _ from 'underscore';
 
 class Arrow extends React.Component {
+  static propTypes = {
+    style: shape(object).isRequired,
+    onClick: func.isRequired,
+    source: string.isRequired,
+  };
+
   constructor() {
     super();
     this.state = {
@@ -30,7 +37,7 @@ class Arrow extends React.Component {
     );
     return (
       <View onEnter={this.onEnter} onExit={this.onExit} style={arrowStyle}>
-        <VrButton onClick={() => this.props.onClick()} style={arrowStyle}>
+        <VrButton onClick={this.props.onClick} style={arrowStyle}>
           <Image style={arrowStyle} source={this.props.source} />
         </VrButton>
       </View>

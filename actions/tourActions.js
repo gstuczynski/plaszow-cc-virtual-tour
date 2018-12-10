@@ -1,6 +1,5 @@
 import alt from '../alt';
-import { asset, NativeModules } from 'react-360';
-import _ from 'underscore';
+import { NativeModules } from 'react-360';
 
 const { SurfacesController } = NativeModules;
 

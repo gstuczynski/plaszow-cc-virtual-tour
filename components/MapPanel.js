@@ -1,6 +1,6 @@
 import React from 'react';
-import { AppRegistry, StyleSheet, asset, Image, VrButton, View, Text } from 'react-360';
-
+import { AppRegistry, asset, Image, VrButton, View } from 'react-360';
+import { shape, string } from 'prop-types';
 import connectToStores from '../connectToStores';
 import TourStore from '../stores/tourStore';
 import TourActions from '../actions/tourActions';
@@ -17,6 +17,12 @@ const storeConnector = {
 };
 
 class MapPanel extends React.Component {
+  static propTypes = {
+    stepData: shape({
+      sceneId: string,
+    }).isRequired,
+  };
+
   handlePinClick = sceneId => {
     console.log('sss', this.props, sceneId);
     if (this.props.stepData.sceneId !== sceneId) {

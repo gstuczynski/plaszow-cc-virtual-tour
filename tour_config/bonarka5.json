@@ -1,0 +1,70 @@
+{
+  "rotationOffset": 10,
+  "uri": "bonarka-05.jpg",
+  "sceneId": "bonarka5",
+  "infoPanels": [{
+    "title": "Szary Dom",
+    "location": {
+      "left": 0,
+      "top": 200
+    },
+    "icon": "loupe.png",
+    "sections": [{
+      "type": "View",
+      "infoSource": "http://pamiec.pl/download/49/46323/KotarbaRNiemieckiobozwPlaszowie1942-1945Przewodnikhistoryczny.pdf",
+      "props": {
+        "style": {
+          "width": 1440,
+          "backgroundColor": "black",
+          "height": 600,
+          "flexDirection": "row",
+          "position": "relative"
+        }
+      },
+      "children": [{
+          "type": "Image",
+          "props": {
+            "source": "gray-house.jpg",
+            "style": {
+              "width": 600,
+              "height": 450,
+              "margin": 15
+            }
+          }
+        },
+        {
+          "type": "Text",
+          "infoSource": "Józef Bau \"Czas zbeszczeszczenia\"",
+          "props": {
+            "content": "Ta kamienica została zbudowana przed wojną i była jednym z najważniejszych budynków obozu - mieszkali tu \"wybitni\" essesmani: Hujar, Zdrojewski, Landsdorfer, Ekert, Glaser... a w piwnicy mieściło się więzienie - i to nie zwykłe więzienie, tylko prawdziwe podziemne kazamaty tortur",
+            "style": {
+              "width": 600,
+              "height": 450,
+              "marginTop": 100,
+              "marginLeft": 30
+            }
+          }
+        }
+      ]
+    }]
+  }],
+  "doors": [{
+      "sceneId": "bonarka2",
+      "preview": "bimg.jpg",
+      "title": "Część administracyjno wojskowa",
+      "location": {
+        "left": 150,
+        "top": 300
+      }
+    },
+    {
+      "sceneId": "bonarka3",
+      "preview": "bimg.jpg",
+      "title": "Część administracyjno wojskowa",
+      "location": {
+        "left": 2450,
+        "top": 380
+      }
+    }
+  ]
+}

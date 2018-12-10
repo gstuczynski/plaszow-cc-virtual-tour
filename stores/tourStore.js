@@ -65,7 +65,6 @@ class TourStore {
   }
 
   onSet3dObjectPositionSuccess(object3dPosition) {
-
     this.setState({ object3dPosition });
   }
 }
