@@ -24,7 +24,6 @@ class MapPanel extends React.Component {
   };
 
   handlePinClick = sceneId => {
-    console.log('sss', this.props, sceneId);
     if (this.props.stepData.sceneId !== sceneId) {
       TourActions.navigateTo(sceneId);
       TourActions.hideInfoPanel();
@@ -32,15 +31,11 @@ class MapPanel extends React.Component {
   };
 
   render() {
-    console.log(pins);
     return (
       <View style={styles.panel}>
         <Image style={styles.image} source={asset('images/plaszow-map.png')} />
         {pins.map((pin, idx) => {
-          console.log(pin);
-          console.log(styles.pin);
           const pinStyle = _.extend({}, styles.pin, pin.location);
-          console.log('pinstyle', pinStyle);
           if (!this.props.stepData) {
             return null;
           }

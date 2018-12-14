@@ -18,7 +18,6 @@ class TourActions {
       dispatch();
       fetch('tour_config/' + step + '.json')
         .then(response => {
-          // console.log('res', asset('sss'))
           if (!response.ok) {
             this.navigateToError(response.body);
           } else {
@@ -47,7 +46,6 @@ class TourActions {
 
   set3dObjectPosition(pos, direction) {
     const newPosition = {};
-    console.log(direction);
 
     switch (direction) {
       case 'left': {

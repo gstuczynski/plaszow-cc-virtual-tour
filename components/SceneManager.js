@@ -22,11 +22,10 @@ class SceneManager extends React.Component {
   static propTypes = scenePropTypes;
 
   componentDidMount() {
-    console.log(this.props.stepData.uri);
     this.updateScene({});
   }
 
-  updateScene = prevState => {
+  updateScene = () => {
     Environment.setBackgroundImage(asset(this.props.stepData.uri), { format: '2D' });
   };
 

@@ -43,7 +43,6 @@ class TourStore {
   }
 
   onNavigateToSuccess(step) {
-    console.log('onNavigateToSuccess', step);
     this.setState({ step, isFetching: false });
   }
 
@@ -60,7 +59,6 @@ class TourStore {
   }
 
   onHideInfoPanel() {
-    console.log('xxx');
     this.setState({ displayInfoPanel: false });
   }
 

@@ -88,7 +88,6 @@ class InfoPanel extends React.Component {
     if (!this.state) {
       return null;
     }
-    console.log('wloz', numerOfSections);
     const { section } = this.state;
     const currentSection = section;
     let nextSection;
