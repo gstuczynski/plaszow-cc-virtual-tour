@@ -95,5 +95,4 @@ const styles = {
 
 const MapPanelWithStore = connectToStores(MapPanel, [TourStore], storeConnector);
 
-AppRegistry.registerComponent('MapPanel', () => MapPanelWithStore);
 export default MapPanelWithStore;

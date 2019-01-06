@@ -22,6 +22,7 @@ class SurfacesController extends Module {
 }
 
 function init(bundle, parent, options = {}) {
+
   const cameraDirection = [0, 0, -1];
   const mapButtoncameraDirection = [0.85, 0.45, -1];
 

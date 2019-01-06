@@ -22,5 +22,4 @@ const MapPanelButton = () => (
 
 const MapPanelButtonWithStore = connectToStores(MapPanelButton, [TourStore], storeConnector);
 
-AppRegistry.registerComponent('MapPanelButton', () => MapPanelButtonWithStore);
 export default MapPanelButtonWithStore;

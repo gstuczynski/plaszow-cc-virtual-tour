@@ -3,6 +3,8 @@ import { AppRegistry, Text } from 'react-360';
 import { bool } from 'prop-types';
 import SceneManager from './components/SceneManager.js';
 import InfoPanel from './components/InfoPanel.js';
+import MapPanelButton from './components/MapPanelButton.js';
+import MapPanel from './components/MapPanel.js';
 
 import config from './tour_config/config.json';
 
@@ -36,5 +38,7 @@ const TemplateTourWithStores = connectToStores(TemplateTour, [TourStore], storeC
 
 AppRegistry.registerComponent('TemplateTour', () => TemplateTourWithStores);
 AppRegistry.registerComponent('InfoPanel', () => InfoPanel);
+AppRegistry.registerComponent('MapPanelButton', () => MapPanelButton);
+AppRegistry.registerComponent('MapPanel', () => MapPanel);
 
 export default TemplateTourWithStores;
